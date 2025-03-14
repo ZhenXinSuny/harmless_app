@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/eartag_ll"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/view_space_16"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/view_height_48">
+
+        <ImageView
+            android:id="@+id/eartag_iv"
+            android:src="@drawable/iv_eartag"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+        <TextView
+            android:layout_toRightOf="@+id/eartag_iv"
+            android:id="@+id/earTag_tv"
+            android:layout_marginLeft="@dimen/view_space_2"
+            android:textColor="@color/T2"
+            android:layout_centerVertical="true"
+            android:text="1231231231231212312312"
+            android:textSize="@dimen/text_size_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <CheckBox
+            android:id="@+id/eartag_check"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="@dimen/view_space_14"
+            android:checked="false"
+            android:button="@drawable/selector_check"
+            android:layout_height="wrap_content">
+
+        </CheckBox>
+
+    </RelativeLayout>
+
+    <View
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size_0.5"
+        android:layout_marginLeft="@dimen/view_space_16"
+        android:background="@color/D1"
+        />
+</LinearLayout>

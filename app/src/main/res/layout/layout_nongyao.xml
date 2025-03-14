@@ -1,0 +1,1158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/F8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="@dimen/view_space_32"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:gravity="center"
+                    android:text="资质"
+                    android:textColor="@color/T6"
+                    android:textSize="@dimen/text_size_14"></TextView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_space_68"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="营业执照号码"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="*"
+                    android:textColor="@color/Red"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <EditText
+                    android:id="@+id/businessLicenseNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/view_space_8"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="end|center"
+                    android:hint="请输入"
+
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16"></EditText>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_right_jiantou" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_size_0.5"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/D6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_space_68"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="农药经营许可证编号"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="*"
+                    android:textColor="@color/Red"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <EditText
+                    android:id="@+id/pesticideOperationLicenseNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/view_space_8"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="end|center"
+                    android:hint="请输入"
+                    android:maxLines="2"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16"></EditText>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_right_jiantou" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/F8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/view_space_32"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:gravity="center"
+                    android:text="生产经营资质"
+                    android:textColor="@color/T6"
+                    android:textSize="@dimen/text_size_14"></TextView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height_50"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="生产者是否取得农药生产许可证"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="*"
+                    android:textColor="@color/Red"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/view_space_8"
+                    android:layout_weight="1"
+                    android:gravity="right|center">
+
+                    <RadioGroup
+                        android:id="@+id/nyrg1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/productionAndManagementOneOk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/view_space_12"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="是"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <RadioButton
+                            android:id="@+id/productionAndManagementOneNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="否"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_size_0.5"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/D6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height_50"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="生产的农药是否取得农药登记证"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="*"
+                    android:textColor="@color/Red"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/view_space_8"
+                    android:layout_weight="1"
+                    android:gravity="right|center">
+
+                    <RadioGroup
+                        android:id="@+id/nyrg2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/productionAndManagementTwoOk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/view_space_12"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="是"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <RadioButton
+                            android:id="@+id/productionAndManagementTwoNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="否"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_size_0.5"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/D6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_space_68"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:maxEms="11"
+                    android:maxLines="2"
+                    android:text="经营者是否取得农药经营许可证或者按规定备案"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="*"
+                    android:textColor="@color/Red"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/view_space_8"
+                    android:layout_weight="1"
+                    android:gravity="right|center">
+
+                    <RadioGroup
+                        android:id="@+id/nyrg3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/productionAndManagementThreeOk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/view_space_12"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+
+                            android:padding="6dp"
+                            android:text="是"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <RadioButton
+                            android:id="@+id/productionAndManagementThreeNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="否"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_size_0.5"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/D6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height_50"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="相关许可证明否超过有效期限"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="*"
+                    android:textColor="@color/Red"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/view_space_8"
+                    android:layout_weight="1"
+                    android:gravity="right|center">
+
+                    <RadioGroup
+                        android:id="@+id/nyrg4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/productionAndManagementFourOk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/view_space_12"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="是"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <RadioButton
+                            android:id="@+id/productionAndManagementFourNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="否"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/F8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/view_space_32"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:gravity="center"
+                    android:text="产品标签"
+                    android:textColor="@color/T6"
+                    android:textSize="@dimen/text_size_14"></TextView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_space_50"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:maxEms="10"
+                    android:text="是否附有标签"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="*"
+                    android:textColor="@color/Red"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/view_space_8"
+                    android:layout_weight="1"
+                    android:gravity="right|center">
+
+                    <RadioGroup
+                        android:id="@+id/nyrg5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/chanPinBiaoQianOneOk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/view_space_12"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="是"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <RadioButton
+                            android:id="@+id/chanPinBiaoQianOneNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="否"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_size_0.5"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/D6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_space_50"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="标签标注的内容是否符合规定"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="*"
+                    android:textColor="@color/Red"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/view_space_8"
+                    android:layout_weight="1"
+                    android:gravity="right|center">
+
+                    <RadioGroup
+                        android:id="@+id/nyrg6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/chanPinBiaoQianTwoOk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/view_space_12"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="是"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <RadioButton
+                            android:id="@+id/chanPinBiaoQianTwoNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="否"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_size_0.5"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/D6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_space_50"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="是否超过保质期"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="*"
+                    android:textColor="@color/Red"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/view_space_8"
+                    android:layout_weight="1"
+                    android:gravity="right|center">
+
+                    <RadioGroup
+                        android:id="@+id/nyrg7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/chanPinBiaoQianThreeOk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/view_space_12"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="是"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <RadioButton
+                            android:id="@+id/chanPinBiaoQianThreeNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="否"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/F8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/view_space_32"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:gravity="center"
+                    android:text="禁限用农药"
+                    android:textColor="@color/T6"
+                    android:textSize="@dimen/text_size_14"></TextView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height_50"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="是否生产、经营国家禁用农药"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="*"
+                    android:textColor="@color/Red"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/view_space_8"
+                    android:layout_weight="1"
+                    android:gravity="right|center">
+
+                    <RadioGroup
+                        android:id="@+id/nyrg8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/jinXianNongYaoOneOk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/view_space_12"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="是"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <RadioButton
+                            android:id="@+id/jinXianNongYaoOneNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="否"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_size_0.5"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/D6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height_50"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="是否超范围经营限制使用农药"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="*"
+                    android:textColor="@color/Red"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/view_space_8"
+                    android:layout_weight="1"
+                    android:gravity="right|center">
+
+                    <RadioGroup
+                        android:id="@+id/nyrg9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/jinXianNongYaoTwoOk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/view_space_12"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="是"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <RadioButton
+                            android:id="@+id/jinXianNongYaoTwoNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="否"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/F8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/view_space_32"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:gravity="center"
+                    android:text="台账"
+                    android:textColor="@color/T6"
+                    android:textSize="@dimen/text_size_14"></TextView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_space_50"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:maxEms="10"
+                    android:maxLines="3"
+                    android:text="是否执行相关台账制度"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="*"
+                    android:textColor="@color/Red"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/view_space_8"
+                    android:layout_weight="1"
+                    android:gravity="right|center">
+
+                    <RadioGroup
+                        android:id="@+id/nyrg10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/taiZhangOk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/view_space_12"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="是"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <RadioButton
+                            android:id="@+id/taiZhangNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="否"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/F8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/view_space_32"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:gravity="center"
+                    android:text="网上销售"
+                    android:textColor="@color/T6"
+                    android:textSize="@dimen/text_size_14"></TextView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_space_50"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:maxEms="10"
+                    android:maxLines="3"
+                    android:text="是否有网络经营店铺"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="*"
+                    android:textColor="@color/Red"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/view_space_8"
+                    android:layout_weight="1"
+                    android:gravity="right|center">
+
+                    <RadioGroup
+                        android:id="@+id/nyrg11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/wangShangXiaoShouOk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/view_space_12"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="是"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <RadioButton
+                            android:id="@+id/wangShangXiaoShouNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="否"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/F8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/view_space_32"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:gravity="center"
+                    android:text="产品质量"
+                    android:textColor="@color/T6"
+                    android:textSize="@dimen/text_size_14"></TextView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_space_50"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:text="是否附具产品质量检验合格证"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="*"
+                    android:textColor="@color/Red"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/view_space_8"
+                    android:layout_weight="1"
+                    android:gravity="right|center">
+
+                    <RadioGroup
+                        android:id="@+id/nyrg12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/chanPinZhiLiangOneOk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/view_space_12"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="是"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <RadioButton
+                            android:id="@+id/chanPinZhiLiangOneNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="否"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_size_0.5"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/D6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_space_50"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:maxEms="10"
+                    android:maxLines="3"
+                    android:text="是否抽样送检"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="*"
+                    android:textColor="@color/Red"
+                    android:textSize="@dimen/text_size_16"></TextView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/view_space_8"
+                    android:layout_weight="1"
+                    android:gravity="right|center">
+
+                    <RadioGroup
+                        android:id="@+id/nyrg13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/chanPinZhiLiangTwoOk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/view_space_12"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="是"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <RadioButton
+                            android:id="@+id/chanPinZhiLiangTwoNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/selector_checkbox"
+                            android:onClick="onRadioButtonClickedNY"
+                            android:padding="6dp"
+                            android:text="否"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

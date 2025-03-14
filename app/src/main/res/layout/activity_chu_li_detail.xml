@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:showDividers="middle">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/titleBarHeight_48"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+         <ImageView
+            android:id="@+id/titlebar_left"
+            android:layout_width="@dimen/view_space_22"
+            android:src="@drawable/title_back"
+            android:layout_marginLeft="@dimen/view_space_12"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true" />
+
+        <com.agridata.cdzhdj.view.ScrollForeverTextView
+            android:id="@+id/titlebar_middle"
+            android:layout_width="wrap_content"
+            android:text="处理单详情"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    <View
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size_0.5"
+        android:background="@color/D1"
+        />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/group_task_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="@color/J6"
+        app:tabIndicatorFullWidth="false"
+        app:tabBackground="@android:color/transparent"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabSelectedTextColor="@color/J6"
+        app:tabIndicator="@drawable/shape_tab_indicator_chuli"
+        app:tabTextAppearance="@style/TabLayoutTextStyle"
+        app:tabTextColor="@color/black"
+        />
+    <com.agridata.cdzhdj.view.CustomViewPager
+        android:id="@+id/fragment_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+</LinearLayout>

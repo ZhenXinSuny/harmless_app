@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_marginTop="@dimen/view_space_6"
+        android:layout_marginStart="@dimen/view_space_8"
+        android:layout_marginRight="@dimen/view_space_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:layout_gravity="center"
+            android:textColor="@color/Red"
+            android:textSize="@dimen/text_size_14">
+        </TextView>
+        <TextView
+            android:layout_width="@dimen/view_space_60"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:text="测试:"
+            android:id="@+id/dai_name_tv"
+            android:ellipsize="end"
+            android:layout_gravity="center"
+            android:textColor="@color/T6"
+            android:textSize="@dimen/text_size_14"/>
+
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/animal_count_et"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:hint="请输入代宰数量"
+            android:inputType="number"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/view_space_12"
+            android:layout_marginRight="@dimen/view_space_12"
+            android:background="@drawable/edittext_bg"
+            android:gravity="left|center"
+            android:paddingLeft="@dimen/view_space_8"
+            android:textColor="@color/T2"
+            android:textColorHint="@color/T6"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+    <TextView
+        android:visibility="gone"
+        android:layout_width="@dimen/view_space_60"
+        android:layout_height="wrap_content"
+        android:text="测试:"
+        android:id="@+id/staff_id"
+        android:layout_gravity="center"
+        android:textColor="@color/T6"
+        android:textSize="@dimen/text_size_14"></TextView>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_default_bg"
+    android:gravity="center"
+    android:id="@+id/card_view_all">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:padding="@dimen/view_space_6"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_record"
+            android:layout_width="@dimen/view_height_64"
+            android:layout_height="@dimen/view_height_64"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/view_space_10"
+            android:src="@drawable/whh" />
+
+        <TextView
+            android:id="@+id/tv_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_record"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/view_space_12"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/T9"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:text="沙克打瞌睡题" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_space_12">
+
+    </LinearLayout>
+
+</LinearLayout>

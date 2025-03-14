@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_border_white"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:paddingTop="@dimen/view_space_26"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="@dimen/view_space_16"
+            android:text="1245"
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold"
+            android:visibility="gone"
+            />
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@drawable/upload_success_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+        <TextView
+            android:id="@+id/content_tv"
+            android:text="上传成功"
+            android:layout_marginTop="@dimen/view_space_8"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_14"
+            />
+        <LinearLayout
+            android:id="@+id/sure_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_space_12"
+            android:gravity="center|bottom"
+            android:orientation="vertical"
+
+            >
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/D1"
+                android:layout_height="@dimen/divider_size_0.5">
+
+            </View>
+            <TextView
+                android:padding="@dimen/view_space_12"
+                android:id="@+id/positive_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bottom_item_bg"
+                android:text="确定"
+                android:textColor="@color/J5"
+                android:textSize="@dimen/text_size_16"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

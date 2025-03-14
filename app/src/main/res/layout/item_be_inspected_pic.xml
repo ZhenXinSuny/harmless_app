@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/view_space_6"
+        android:background="@drawable/bg_be_inspected_pic"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_60">
+
+
+        <ImageView
+            android:id="@+id/file_img_iv"
+            android:layout_marginLeft="@dimen/view_space_12"
+            android:layout_width="@dimen/view_height_40"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/view_height_40">
+
+        </ImageView>
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/view_space_10"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/file_name_tv"
+                android:padding="@dimen/view_space_4"
+                android:text="1324321.jpg"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:id="@+id/file_size_tv"
+                android:padding="@dimen/view_space_4"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/black"
+                android:text="234.123KB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

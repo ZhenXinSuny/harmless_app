@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:background="@color/F8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="资质"
+                        android:textColor="@color/T6"
+                        android:textSize="@dimen/text_size_14"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_10"
+                        android:layout_height="@dimen/view_space_32">
+                    </TextView>
+                </LinearLayout>
+
+            <LinearLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_height="@dimen/view_space_68"
+                android:orientation="horizontal">
+                <TextView
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:maxEms="11"
+                    android:text="是否持有有效的种畜禽和水产种苗《生产经营许可证》"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/text_size_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:text="*"
+                    android:textColor="@color/Red"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/text_size_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:gravity="right|center"
+                    android:layout_marginRight="@dimen/view_space_8"
+                    android:layout_height="match_parent">
+                    <RadioGroup
+                        android:id="@+id/fishTwoRg1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                         <RadioButton android:onClick="onRadioButtonClickedFishTwo" 
+                            android:padding="6dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="是"
+                            android:id="@+id/fishTwo1Ok"
+                            android:button="@drawable/selector_checkbox"
+                            android:layout_marginRight="@dimen/view_space_12"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                         <RadioButton android:onClick="onRadioButtonClickedFishTwo" 
+                            android:padding="6dp"
+                             android:id="@+id/fishTwo1No"
+                            android:button="@drawable/selector_checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="否"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+
+                <View
+                    android:background="@color/D6"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_size_0.5"/>
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_height="@dimen/view_space_68"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:maxEms="11"
+                        android:text="种畜禽和水产种苗《生产经营许可证》发放机构是否符合规定"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:text="*"
+                        android:textColor="@color/Red"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="right|center"
+                        android:layout_marginRight="@dimen/view_space_8"
+                        android:layout_height="match_parent">
+                        <RadioGroup
+                            android:id="@+id/fishTwoRg2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                             <RadioButton android:onClick="onRadioButtonClickedFishTwo" 
+                                android:padding="6dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="是"
+                                 android:id="@+id/fishTwo2Ok"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_marginRight="@dimen/view_space_12"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+
+                             <RadioButton android:onClick="onRadioButtonClickedFishTwo" 
+                                android:padding="6dp"
+                                 android:id="@+id/fishTwo2No"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="否"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:background="@color/D6"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_size_0.5"/>
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_height="@dimen/view_space_68"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:maxEms="11"
+                        android:text="是否持有有效的种畜禽《动物防疫条件合格证》（水产苗种场不作要求）"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:text="*"
+                        android:textColor="@color/Red"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="right|center"
+                        android:layout_marginRight="@dimen/view_space_8"
+                        android:layout_height="match_parent">
+                        <RadioGroup
+                            android:id="@+id/fishTwoRg3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                             <RadioButton android:onClick="onRadioButtonClickedFishTwo" 
+                                android:padding="6dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="是"
+                                 android:id="@+id/fishTwo3Ok"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_marginRight="@dimen/view_space_12"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+
+                             <RadioButton android:onClick="onRadioButtonClickedFishTwo" 
+                                android:padding="6dp"
+                                 android:id="@+id/fishTwo3No"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="否"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:background="@color/F8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="生产经营"
+                        android:textColor="@color/T6"
+                        android:textSize="@dimen/text_size_14"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_10"
+                        android:layout_height="@dimen/view_space_32">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_height="@dimen/view_space_68"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:maxEms="11"
+                        android:text="是否按照规定的品种、品系、代别和利用年限从事生产经营"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:text="*"
+                        android:textColor="@color/Red"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="right|center"
+                        android:layout_marginRight="@dimen/view_space_8"
+                        android:layout_height="match_parent">
+                        <RadioGroup
+                            android:id="@+id/fishTwoRg4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                             <RadioButton android:onClick="onRadioButtonClickedFishTwo" 
+                                android:padding="6dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="是"
+                                 android:id="@+id/fishTwo4Ok"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_marginRight="@dimen/view_space_12"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+
+                             <RadioButton android:onClick="onRadioButtonClickedFishTwo" 
+                                android:padding="6dp"
+                                 android:id="@+id/fishTwo4No"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="否"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:background="@color/D6"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_size_0.5"/>
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_height="@dimen/view_space_50"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:maxEms="11"
+                        android:text="是否建立生产和育种档案"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:text="*"
+                        android:textColor="@color/Red"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="right|center"
+                        android:layout_marginRight="@dimen/view_space_8"
+                        android:layout_height="match_parent">
+                        <RadioGroup
+                            android:id="@+id/fishTwoRg5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                             <RadioButton android:onClick="onRadioButtonClickedFishTwo" 
+                                android:padding="6dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="是"
+                                 android:id="@+id/fishTwo5Ok"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_marginRight="@dimen/view_space_12"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+
+                             <RadioButton android:onClick="onRadioButtonClickedFishTwo" 
+                                android:padding="6dp"
+                                 android:id="@+id/fishTwo5No"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="否"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:background="@color/D6"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_size_0.5"/>
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_height="@dimen/view_space_50"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:maxEms="11"
+                        android:text="是否建立和实施防疫制度"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:text="*"
+                        android:textColor="@color/Red"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="right|center"
+                        android:layout_marginRight="@dimen/view_space_8"
+                        android:layout_height="match_parent">
+                        <RadioGroup
+                            android:id="@+id/fishTwoRg6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                             <RadioButton android:onClick="onRadioButtonClickedFishTwo" 
+                                android:padding="6dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="是"
+                                 android:id="@+id/fishTwo6Ok"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_marginRight="@dimen/view_space_12"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+
+                             <RadioButton android:onClick="onRadioButtonClickedFishTwo" 
+                                android:padding="6dp"
+                                 android:id="@+id/fishTwo6No"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="否"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:background="@color/D6"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_size_0.5"/>
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_height="@dimen/view_space_68"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:maxEms="11"
+                        android:text="销售的种畜禽和水产种苗是否达到国家标准、行业标准或者地方标准，并附有种畜禽和水产种苗场出具的种畜禽和水产种苗《合格证》"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:text="*"
+                        android:textColor="@color/Red"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="right|center"
+                        android:layout_marginRight="@dimen/view_space_8"
+                        android:layout_height="match_parent">
+                        <RadioGroup
+                            android:id="@+id/fishTwoRg7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                             <RadioButton android:onClick="onRadioButtonClickedFishTwo" 
+                                android:padding="6dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="是"
+                                 android:id="@+id/fishTwo7Ok"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_marginRight="@dimen/view_space_12"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+
+                             <RadioButton android:onClick="onRadioButtonClickedFishTwo" 
+                                android:padding="6dp"
+                                 android:id="@+id/fishTwo7No"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="否"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:background="@color/D6"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_size_0.5"/>
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_height="@dimen/view_space_68"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:maxEms="11"
+                        android:text="进行畜禽专业配种（包括人工授精）、孵化的，是否使用从种畜禽场引进并附有种畜禽场出具的《种畜禽合格证》、种畜系谱"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:text="*"
+                        android:textColor="@color/Red"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="right|center"
+                        android:layout_marginRight="@dimen/view_space_8"
+                        android:layout_height="match_parent">
+                        <RadioGroup
+                            android:id="@+id/fishTwoRg8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                             <RadioButton android:onClick="onRadioButtonClickedFishTwo" 
+                                android:padding="6dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="是"
+                                 android:id="@+id/fishTwo8Ok"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_marginRight="@dimen/view_space_12"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+
+                             <RadioButton android:onClick="onRadioButtonClickedFishTwo" 
+                                android:padding="6dp"
+                                 android:id="@+id/fishTwo8No"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="否"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:background="@color/F8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="安全生产"
+                        android:textColor="@color/T6"
+                        android:textSize="@dimen/text_size_14"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_10"
+                        android:layout_height="@dimen/view_space_32">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_height="@dimen/view_space_68"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:maxEms="11"
+                        android:text="是否建立安全生产制度,设置安全防护设施、警示标识,配备救生、消防设备,组织安全培训"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:text="*"
+                        android:textColor="@color/Red"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="right|center"
+                        android:layout_marginRight="@dimen/view_space_8"
+                        android:layout_height="match_parent">
+                        <RadioGroup
+                            android:id="@+id/fishTwoRg9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                             <RadioButton android:onClick="onRadioButtonClickedFishTwo" 
+                                android:padding="6dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="是"
+                                 android:id="@+id/fishTwo9Ok"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_marginRight="@dimen/view_space_12"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+
+                             <RadioButton android:onClick="onRadioButtonClickedFishTwo" 
+                                android:padding="6dp"
+                                 android:id="@+id/fishTwo9No"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="否"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

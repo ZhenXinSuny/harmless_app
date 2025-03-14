@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/view_space_8"
+        android:layout_marginStart="@dimen/view_space_8"
+        android:layout_marginRight="@dimen/view_space_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:layout_gravity="center"
+            android:textColor="@color/Red"
+            android:textSize="@dimen/text_size_14">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="审核意见:"
+            android:layout_gravity="center"
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_14"></TextView>
+
+
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/shenheyijian_et"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_height_36"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/view_space_12"
+            android:inputType="number|numberDecimal"
+            android:layout_marginRight="@dimen/view_space_12"
+            android:background="@drawable/edittext_bg"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="left|center"
+            android:hint="请选择审核意见"
+            android:paddingLeft="@dimen/view_space_8"
+            android:textColor="@color/T2"
+            android:textColorHint="@color/T2"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/qitayijian"
+        android:layout_marginBottom="@dimen/view_space_8"
+        android:layout_marginStart="@dimen/view_space_8"
+        android:layout_marginRight="@dimen/view_space_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:layout_gravity="center"
+            android:textColor="@color/Red"
+            android:textSize="@dimen/text_size_14">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="其他意见:"
+            android:layout_gravity="center"
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_14"></TextView>
+
+
+        <EditText
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_height_36"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/view_space_12"
+            android:inputType="number|numberDecimal"
+            android:layout_marginRight="@dimen/view_space_12"
+            android:background="@drawable/edittext_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="left|center"
+            android:hint="请输入其他意见"
+            android:paddingLeft="@dimen/view_space_8"
+            android:textColor="@color/T2"
+            android:textColorHint="@color/T2"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/view_space_8"
+        android:layout_marginTop="@dimen/view_space_8"
+        android:layout_marginRight="@dimen/view_space_8"
+        android:layout_marginBottom="@dimen/view_space_8"
+        android:background="@drawable/transport_btn_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/title_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/view_space_8"
+                android:layout_marginTop="@dimen/view_space_6"
+                android:layout_marginRight="@dimen/view_space_22"
+                android:layout_marginBottom="@dimen/view_space_6"
+                android:text="审核监督员签名"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/view_space_40"
+            android:layout_marginTop="@dimen/view_space_12"
+            android:layout_marginRight="@dimen/view_space_40">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/shenhejianduyuan_iv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height_140"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_default_qianming">
+            </androidx.appcompat.widget.AppCompatImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/view_space_4"
+                android:text="点击图片进行签名"
+                android:layout_marginBottom="@dimen/view_space_8"
+                android:textColor="@color/Red"
+                android:textSize="@dimen/text_size_12"/>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/shenhe_tongguo"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_36"
+        android:layout_marginLeft="@dimen/view_space_32"
+        android:layout_marginTop="@dimen/view_space_8"
+        android:layout_marginRight="@dimen/view_space_32"
+        android:background="@drawable/bg_assignment_no"
+        android:enabled="true"
+        android:text="审核通过"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14" />
+    <Button
+        android:id="@+id/shenhe_butongguo"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_36"
+        android:layout_marginBottom="@dimen/view_space_20"
+        android:layout_marginLeft="@dimen/view_space_32"
+        android:layout_marginTop="@dimen/view_space_8"
+        android:layout_marginRight="@dimen/view_space_32"
+        android:background="@drawable/ps_del_btn"
+        android:enabled="true"
+        android:text="审核不通过"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14" />
+
+</LinearLayout>

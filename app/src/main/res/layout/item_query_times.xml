@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/view_space_12"
+    android:clickable="true"
+    android:background="@drawable/reported_barrier_bg"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/view_space_10"
+        android:layout_marginTop="@dimen/view_space_14"
+        android:layout_marginRight="@dimen/view_space_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textSize="@dimen/text_size_16"
+            android:id="@+id/give_eartag_age_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始:" />
+
+        <LinearLayout
+            android:id="@+id/give_eartag_age"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/view_space_6"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/view_space_6">
+
+            <TextView
+                android:textColor="@color/T6"
+                android:id="@+id/start_time_tv"
+                android:background="@drawable/search_edittext_bg"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/view_height_44"
+                android:text="12312312"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:gravity="center|left"
+                android:layout_gravity="center"
+                android:maxLength="10"
+                android:textSize="@dimen/text_size_16" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/view_space_10"
+        android:layout_marginTop="@dimen/view_height_8"
+        android:layout_marginRight="@dimen/view_space_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textSize="@dimen/text_size_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="结束:" />
+
+        <LinearLayout
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/view_space_6"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/view_space_6">
+
+
+            <TextView
+                android:id="@+id/end_time_tv"
+                android:background="@drawable/search_edittext_bg"
+                android:textColor="@color/T6"
+                android:layout_width="0dp"
+                android:gravity="center|left"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/view_height_44"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:maxLength="10"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/view_space_12"
+        android:orientation="horizontal"
+
+        android:layout_marginRight="@dimen/view_space_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:layout_weight="1"
+            android:text="取消"
+            android:id="@+id/no_btn"
+            android:layout_marginRight="@dimen/view_space_10"
+           android:layout_marginLeft="@dimen/view_height_30"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/white"
+            android:background="@drawable/selector_common_btn_red"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/view_space_38">
+
+        </Button>
+        <Button
+            android:layout_weight="1"
+            android:text="查询"
+            android:layout_marginLeft="@dimen/view_space_10"
+            android:id="@+id/sure_btn"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/white"
+            android:layout_marginRight="@dimen/view_height_30"
+            android:background="@drawable/ripple_login"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/view_space_38">
+
+        </Button>
+
+    </LinearLayout>
+
+</LinearLayout>

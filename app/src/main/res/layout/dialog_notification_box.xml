@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:background="@drawable/rounded_corner_dialog"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/iv_bg"
+            android:layout_width="@dimen/view_height_90"
+            android:layout_height="@dimen/view_height_90"
+            android:layout_marginTop="@dimen/view_space_12"
+            android:layout_gravity="center"
+            android:background="@drawable/icons_messaging" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="16dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:text="公告" />
+
+
+        <TextView
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.1"
+            android:textColor="#757575"
+            android:textSize="14sp"
+            android:text="亲爱的智慧动监用户：四川智慧动监是一款水产行业综合监管软件,为养殖户和监管部门提供车辆备案、检疫申报、动物交易等服务,可以更好的找到可靠的销售厂家。软件通过无纸化签发动物检疫证明、微信检疫申"
+             />
+
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/ripple_login"
+            android:text="我知道了"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="2dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:background="@android:color/white" />
+
+    <ImageButton
+        android:id="@+id/ib_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:background="@drawable/ic_dialog_close" />
+</LinearLayout>

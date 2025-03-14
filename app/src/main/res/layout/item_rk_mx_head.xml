@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/view_space_12"
+        android:layout_height="@dimen/view_height_48">
+        <TextView
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold"
+            android:id="@+id/sj_dh_tv"
+            android:text="收集单号"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:maxLength="10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+        </TextView>
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_14"
+            android:layout_weight="1"
+            android:id="@+id/sj_ren_tv"
+            android:text="收集人员"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:id="@+id/sj_shijian_tv"
+            android:text="收集时间"
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_14"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_14"
+            android:layout_weight="1"
+            android:id="@+id/sj_shul_tv"
+            android:text="收集动物"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+        </TextView>
+
+    </LinearLayout>
+    <View
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size_0.5"
+        android:layout_marginLeft="@dimen/view_space_12"
+        android:background="@color/D1"
+        />
+</LinearLayout>

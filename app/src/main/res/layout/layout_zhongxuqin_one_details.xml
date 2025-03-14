@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:background="@color/F8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="检查内容"
+                        android:textColor="@color/T6"
+                        android:textSize="@dimen/text_size_14"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_10"
+                        android:layout_height="@dimen/view_space_32">
+                    </TextView>
+                </LinearLayout>
+
+            <LinearLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_height="@dimen/view_space_68"
+                android:orientation="horizontal">
+                <TextView
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:maxEms="11"
+                    android:text="使用未取得新饲料、新饲料添加剂证书的新饲料、新饲料添加剂或者未取得饲料、饲料添加剂进口登记证的进口饲料、进口饲料添加剂。"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/text_size_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:text="*"
+                    android:textColor="@color/Red"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/text_size_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:gravity="right|center"
+                    android:layout_marginRight="@dimen/view_space_8"
+                    android:layout_height="match_parent">
+                    <RadioGroup
+                        android:id="@+id/zxqRg1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                          <RadioButton android:enabled="false"  
+                            android:id="@+id/zxq1Ok"
+                            android:padding="6dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="是"
+                            
+                            android:button="@drawable/selector_checkbox"
+                            android:layout_marginRight="@dimen/view_space_12"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+
+                          <RadioButton android:enabled="false"  
+                            android:id="@+id/zxq1No"
+                            android:padding="6dp"
+                            android:button="@drawable/selector_checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="否"
+                            android:textColor="@color/T6"
+                            android:textSize="@dimen/text_size_14" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+
+                <View
+                    android:background="@color/D6"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_size_0.5"/>
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_height="@dimen/view_space_68"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:maxEms="11"
+                        android:text="使用无产品标签、无生产许可证、无产品质量标准、无产品质量检验合格证的饲料、饲料添加剂。"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:text="*"
+                        android:textColor="@color/Red"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="right|center"
+                        android:layout_marginRight="@dimen/view_space_8"
+                        android:layout_height="match_parent">
+                        <RadioGroup
+                            android:id="@+id/zxqRg2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                              <RadioButton android:enabled="false"  
+                                android:id="@+id/zxq2Ok"
+                                android:padding="6dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="是"
+                                
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_marginRight="@dimen/view_space_12"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+
+                              <RadioButton android:enabled="false"  
+                                android:id="@+id/zxq2No"
+                                android:padding="6dp"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="否"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:background="@color/D6"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_size_0.5"/>
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_height="@dimen/view_space_68"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:maxEms="11"
+                        android:text="在饲料或者动物饮用水中添加饲料添加剂，不遵守国务院农业行政主管部门制定的饲料添加剂安全使用规范。。"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:text="*"
+                        android:textColor="@color/Red"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="right|center"
+                        android:layout_marginRight="@dimen/view_space_8"
+                        android:layout_height="match_parent">
+                        <RadioGroup
+                            android:id="@+id/zxqRg3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                              <RadioButton android:enabled="false"  
+                                android:id="@+id/zxq3Ok"
+                                android:padding="6dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="是"
+                                
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_marginRight="@dimen/view_space_12"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+
+                              <RadioButton android:enabled="false"  
+                                android:id="@+id/zxq3No"
+                                android:padding="6dp"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="否"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:background="@color/D6"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_size_0.5"/>
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_height="@dimen/view_space_68"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:maxEms="11"
+                        android:text="使用自行配制的饲料，不遵守国务院农业行政主管部门制定的自行配制饲料使用规范"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:text="*"
+                        android:textColor="@color/Red"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="right|center"
+                        android:layout_marginRight="@dimen/view_space_8"
+                        android:layout_height="match_parent">
+                        <RadioGroup
+                            android:id="@+id/zxqRg4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                              <RadioButton android:enabled="false"  
+                                android:id="@+id/zxq4Ok"
+                                android:padding="6dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="是"
+                                
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_marginRight="@dimen/view_space_12"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+
+                              <RadioButton android:enabled="false"  
+                                android:id="@+id/zxq4No"
+                                android:padding="6dp"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="否"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:background="@color/D6"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_size_0.5"/>
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_height="@dimen/view_space_68"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:maxEms="11"
+                        android:text="使用限制使用的物质养殖动物，不遵守国务院农业行政主管部门的限制性规定"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:text="*"
+                        android:textColor="@color/Red"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="right|center"
+                        android:layout_marginRight="@dimen/view_space_8"
+                        android:layout_height="match_parent">
+                        <RadioGroup
+                            android:id="@+id/zxqRg5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                              <RadioButton android:enabled="false"  
+                                android:id="@+id/zxq5Ok"
+                                android:padding="6dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="是"
+                                
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_marginRight="@dimen/view_space_12"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+
+                              <RadioButton android:enabled="false"  
+                                android:id="@+id/zxq5No"
+                                android:padding="6dp"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="否"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:background="@color/D6"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_size_0.5"/>
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_height="@dimen/view_space_68"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:maxEms="11"
+                        android:text="在反刍动物饲料中添加乳和乳制品以外的动物源性成分"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:text="*"
+                        android:textColor="@color/Red"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="right|center"
+                        android:layout_marginRight="@dimen/view_space_8"
+                        android:layout_height="match_parent">
+                        <RadioGroup
+                            android:id="@+id/zxqRg6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                              <RadioButton android:enabled="false"  
+                                android:id="@+id/zxq6Ok"
+                                android:padding="6dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="是"
+                                
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_marginRight="@dimen/view_space_12"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+
+                              <RadioButton android:enabled="false"  
+                                android:id="@+id/zxq6No"
+                                android:padding="6dp"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="否"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:background="@color/D6"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_size_0.5"/>
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_height="@dimen/view_space_68"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:maxEms="11"
+                        android:text="在饲料或者动物饮用水中添加国务院农业行政主管部门公布禁用的物质以及对人体具有直接或者潜在危害的其他物质，或者直接使用上述物质养殖动物，直接使用原料药"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:text="*"
+                        android:textColor="@color/Red"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="right|center"
+                        android:layout_marginRight="@dimen/view_space_8"
+                        android:layout_height="match_parent">
+                        <RadioGroup
+                            android:id="@+id/zxqRg7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                              <RadioButton android:enabled="false"  
+                                android:id="@+id/zxq7Ok"
+                                android:padding="6dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="是"
+                                
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_marginRight="@dimen/view_space_12"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+
+                              <RadioButton android:enabled="false"  
+                                android:id="@+id/zxq7No"
+                                android:padding="6dp"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="否"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:background="@color/D6"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_size_0.5"/>
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_height="@dimen/view_space_68"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:maxEms="11"
+                        android:text="未经兽医开具处方购买、使用兽用处方药"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:text="*"
+                        android:textColor="@color/Red"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="right|center"
+                        android:layout_marginRight="@dimen/view_space_8"
+                        android:layout_height="match_parent">
+                        <RadioGroup
+                            android:id="@+id/zxqRg8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                              <RadioButton android:enabled="false"  
+                                android:id="@+id/zxq8Ok"
+                                android:padding="6dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="是"
+                                
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_marginRight="@dimen/view_space_12"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+
+                              <RadioButton android:enabled="false"  
+                                android:id="@+id/zxq8No"
+                                android:padding="6dp"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="否"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:background="@color/D6"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_size_0.5"/>
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_height="@dimen/view_space_68"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:maxEms="11"
+                        android:text="未建立用药记录或者记录不完整真实的，未建立养殖档案或未按照规定保存养殖档案"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:text="*"
+                        android:textColor="@color/Red"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="right|center"
+                        android:layout_marginRight="@dimen/view_space_8"
+                        android:layout_height="match_parent">
+                        <RadioGroup
+                            android:id="@+id/zxqRg9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                              <RadioButton android:enabled="false"  
+                                android:id="@+id/zxq9Ok"
+                                android:padding="6dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="是"
+                                
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_marginRight="@dimen/view_space_12"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+
+                              <RadioButton android:enabled="false"  
+                                android:id="@+id/zxq9No"
+                                android:padding="6dp"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="否"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:background="@color/D6"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_size_0.5"/>
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_height="@dimen/view_space_68"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:maxEms="11"
+                        android:text="未按照国家有关兽药安全使用规定使用兽药的，或者使用禁止使用的药品和其他化合物的，或者将人用药品用于动物"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:text="*"
+                        android:textColor="@color/Red"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="right|center"
+                        android:layout_marginRight="@dimen/view_space_8"
+                        android:layout_height="match_parent">
+                        <RadioGroup
+                            android:id="@+id/zxqRg10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                              <RadioButton android:enabled="false"  
+                                android:id="@+id/zxq10Ok"
+                                android:padding="6dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="是"
+                                
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_marginRight="@dimen/view_space_12"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+
+                              <RadioButton android:enabled="false"  
+                                android:id="@+id/zxq10No"
+                                android:padding="6dp"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="否"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:background="@color/D6"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_size_0.5"/>
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_height="@dimen/view_space_68"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:maxEms="11"
+                        android:text="养殖者发现其使用的饲料、饲料添加剂对养殖动物、人体健康有害或者存在其他安全隐患的，未立即停止使用、未向饲料管理部门报告"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:text="*"
+                        android:textColor="@color/Red"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="right|center"
+                        android:layout_marginRight="@dimen/view_space_8"
+                        android:layout_height="match_parent">
+                        <RadioGroup
+                            android:id="@+id/zxqRg11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                              <RadioButton android:enabled="false"  
+                                android:id="@+id/zxq11Ok"
+                                android:padding="6dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="是"
+                                
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_marginRight="@dimen/view_space_12"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+
+                              <RadioButton android:enabled="false"  
+                                android:id="@+id/zxq11No"
+                                android:padding="6dp"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="否"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:background="@color/D6"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_size_0.5"/>
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/view_space_10"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_height="@dimen/view_space_68"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:maxEms="11"
+                        android:text="兽药使用单位和开具处方的兽医人员发现可能与兽药使用有关的严重不良反应，不向所在地人民政府兽医行政管理部门报告"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:text="*"
+                        android:textColor="@color/Red"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="right|center"
+                        android:layout_marginRight="@dimen/view_space_8"
+                        android:layout_height="match_parent">
+                        <RadioGroup
+                            android:id="@+id/zxqRg12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                              <RadioButton android:enabled="false"  
+                                android:id="@+id/zxq12Ok"
+                                android:padding="6dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="是"
+                                
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_marginRight="@dimen/view_space_12"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+
+                              <RadioButton android:enabled="false"  
+                                android:id="@+id/zxq12No"
+                                android:padding="6dp"
+                                android:button="@drawable/selector_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="否"
+                                android:textColor="@color/T6"
+                                android:textSize="@dimen/text_size_14" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

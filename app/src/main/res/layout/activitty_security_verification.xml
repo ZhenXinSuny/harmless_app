@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/titleBarHeight_48"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/titlebar_left"
+            android:layout_width="@dimen/view_space_22"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/view_space_12"
+            android:src="@drawable/title_back" />
+
+        <com.agridata.cdzhdj.view.ScrollForeverTextView
+            android:id="@+id/titlebar_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="安全验证"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_40"
+        android:background="#FFFAE3">
+
+        <TextView
+            android:id="@+id/tips"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/view_height_40"
+            android:layout_marginLeft="@dimen/view_space_12"
+            android:gravity="center"
+            android:text="@string/security_title"
+            android:textColor="@color/T6"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"></TextView>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/view_space_12"
+        android:layout_marginTop="@dimen/view_height_40">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/verification_code_was_sent_to"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tips" />
+
+            <TextView
+                android:id="@+id/phone_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/view_space_8"
+                android:gravity="center"
+                android:text="+86 151****7440"
+                android:textColor="@color/T6"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/send_sms_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/view_space_12"
+            android:text="@string/send"
+            android:textColor="@color/T2">
+
+        </TextView>
+    </RelativeLayout>
+
+
+    <com.agridata.cdzhdj.view.SplitEditText
+        android:id="@+id/code_et"
+        android:layout_marginLeft="@dimen/view_space_12"
+        android:layout_marginRight="@dimen/view_space_12"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_60"
+        android:layout_marginTop="@dimen/view_space_38"
+        android:inputType="number"
+        app:setBorderStyle="line"
+        app:setBorderColor="@color/T6"
+        app:setFocusBorderColor="@color/J1"
+        app:setMaxLength="6" />
+
+
+</LinearLayout>

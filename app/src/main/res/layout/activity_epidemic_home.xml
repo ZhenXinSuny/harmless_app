@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/titleBarHeight_48"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/titlebar_left"
+                    android:layout_width="@dimen/view_space_24"
+                    android:src="@drawable/title_back"
+                    android:layout_marginLeft="@dimen/view_space_10"
+                    android:layout_height="@dimen/view_space_24"
+                    android:layout_centerVertical="true" />
+
+                <com.agridata.cdzhdj.view.ScrollForeverTextView
+                    android:id="@+id/titlebar_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:ellipsize="marquee"
+                    android:text="追溯管理"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:src="@drawable/ic_bowen"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_space_120">
+            </ImageView>
+
+
+
+            <LinearLayout
+                android:id="@+id/xdr_ll"
+                android:clickable="true"
+                android:descendantFocusability="blocksDescendants"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/view_space_16"
+                android:layout_height="@dimen/view_space_68"
+                android:gravity="center_vertical"
+                android:padding="@dimen/view_space_2"
+               >
+
+                <ImageView
+                    android:id="@+id/xdr_iv"
+                    android:layout_width="@dimen/view_height_64"
+                    android:layout_height="@dimen/view_height_64"
+                    android:padding="@dimen/view_space_8"
+                    android:src="@drawable/select_xdr_image_bg" />
+
+                <TextView
+                    android:layout_marginStart="@dimen/view_space_6"
+                    android:id="@+id/xdr_title_tv"
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="畜主"
+                    android:textColor="@drawable/select_ll_tv_bg"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/text_size_16"
+                    android:layout_gravity="center"
+                    android:src="@drawable/select_right_arrow_bg" />
+            </LinearLayout>
+
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_size_0.5"
+                android:layout_marginLeft="@dimen/view_space_16"
+                android:layout_marginRight="@dimen/view_space_16"
+                android:background="@color/D4" />
+
+
+
+            <LinearLayout
+                android:id="@+id/my_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_space_68"
+                android:clickable="true"
+                android:descendantFocusability="blocksDescendants"
+                android:gravity="center_vertical"
+                android:padding="@dimen/view_space_2">
+
+                <ImageView
+                    android:id="@+id/my_iv"
+                    android:layout_width="@dimen/view_height_64"
+                    android:layout_height="@dimen/view_height_64"
+                    android:padding="@dimen/view_space_8"
+                    android:src="@drawable/select_my_image_bg" />
+
+                <TextView
+                    android:layout_marginStart="@dimen/view_space_6"
+                    android:id="@+id/my_title_tv"
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="免疫"
+                    android:textColor="@drawable/select_ll_tv_bg"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/text_size_16"
+                    android:src="@drawable/select_right_arrow_bg" />
+            </LinearLayout>
+
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_size_0.5"
+                android:layout_marginLeft="@dimen/view_space_16"
+                android:layout_marginEnd="@dimen/view_space_16"
+                android:background="@color/D4" />
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/xdr_check_ll"
+                android:clickable="true"
+                android:descendantFocusability="blocksDescendants"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_space_68"
+                android:gravity="center_vertical"
+                android:padding="@dimen/view_space_2"
+                >
+
+                <ImageView
+                    android:id="@+id/xdr_check_iv"
+                    android:layout_width="@dimen/view_height_64"
+                    android:layout_height="@dimen/view_height_64"
+                    android:padding="@dimen/view_space_8"
+                    android:src="@drawable/select_xdr_image_bg" />
+
+                <TextView
+                    android:layout_marginStart="@dimen/view_space_6"
+                    android:id="@+id/xdr_check_tv"
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="畜主审核"
+                    android:textColor="@drawable/select_ll_tv_bg"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/text_size_16"
+                    android:layout_gravity="center"
+                    android:src="@drawable/select_right_arrow_bg" />
+            </LinearLayout>
+
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:id="@+id/xdr_check_line"
+                android:layout_height="@dimen/divider_size_0.5"
+                android:layout_marginLeft="@dimen/view_space_16"
+                android:layout_marginRight="@dimen/view_space_16"
+                android:background="@color/D4" />
+
+
+
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/yzzucx_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_space_68"
+                android:clickable="true"
+                android:descendantFocusability="blocksDescendants"
+                android:gravity="center_vertical"
+                android:padding="@dimen/view_space_2">
+
+                <ImageView
+                    android:layout_width="@dimen/view_height_64"
+                    android:layout_height="@dimen/view_height_64"
+                    android:padding="@dimen/view_space_8"
+                    android:src="@drawable/select_yzzucx_image_bg" />
+
+                <TextView
+                    android:layout_marginStart="@dimen/view_space_6"
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="养殖追溯查询"
+                    android:textColor="@drawable/select_ll_tv_bg"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/text_size_16"
+                    android:src="@drawable/select_right_arrow_bg" />
+            </LinearLayout>
+
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="@dimen/divider_size_0.5"
+                android:layout_marginLeft="@dimen/view_space_16"
+                android:layout_marginEnd="@dimen/view_space_16"
+                android:background="@color/D4" />
+
+
+            <LinearLayout
+                android:id="@+id/sjtb_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_space_68"
+                android:clickable="true"
+                android:descendantFocusability="blocksDescendants"
+                android:gravity="center_vertical"
+                android:padding="@dimen/view_space_2">
+
+                <ImageView
+                    android:layout_width="@dimen/view_height_64"
+                    android:layout_height="@dimen/view_height_64"
+                    android:padding="@dimen/view_space_8"
+                    android:src="@drawable/select_sjtb_image_bg" />
+
+                <TextView
+                    android:layout_marginStart="@dimen/view_space_6"
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="数据同步"
+                    android:textColor="@drawable/select_ll_tv_bg"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/text_size_16"
+                    android:src="@drawable/select_right_arrow_bg" />
+            </LinearLayout>
+
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_size_0.5"
+                android:layout_marginLeft="@dimen/view_space_16"
+                android:layout_marginEnd="@dimen/view_space_16"
+                android:background="@color/D4" />
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

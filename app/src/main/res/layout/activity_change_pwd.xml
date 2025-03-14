@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/titleBarHeight_48"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/titlebar_left"
+            android:layout_width="@dimen/view_space_22"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/view_space_12"
+            android:src="@drawable/title_back" />
+
+        <com.agridata.cdzhdj.view.ScrollForeverTextView
+            android:id="@+id/titlebar_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="重设密码"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_40"
+        android:background="#FFFAE3">
+
+        <TextView
+            android:id="@+id/tips"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/view_height_40"
+            android:layout_marginLeft="@dimen/view_space_12"
+            android:gravity="center"
+            android:text="@string/new_pwd_title"
+            android:textColor="@color/T6"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"/>
+    </LinearLayout>
+
+
+    <com.agridata.cdzhdj.view.ClearEditText
+        android:id="@+id/input_new_pwd_cet"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_54"
+        android:layout_marginLeft="@dimen/view_space_8"
+        android:layout_marginRight="@dimen/view_space_8"
+        android:background="@color/white"
+        android:hint="@string/please_input_new_pwd"
+        android:paddingLeft="@dimen/view_space_18"
+        android:textCursorDrawable="@drawable/shape_text_cursor_drawable"
+        android:layout_marginTop="@dimen/view_space_38"
+        android:paddingRight="@dimen/view_space_18"
+        android:textColor="@color/T2"
+        android:textColorHint="@color/T6"
+        android:inputType="textPassword"
+        android:textSize="@dimen/text_size_16"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size_0.5"
+        android:layout_marginLeft="@dimen/view_space_18"
+        android:layout_marginRight="@dimen/view_space_18"
+        android:background="@color/D6"
+        />
+    <com.agridata.cdzhdj.view.ClearEditText
+        android:layout_marginLeft="@dimen/view_space_8"
+        android:layout_marginRight="@dimen/view_space_8"
+        android:id="@+id/input_new_pwd_again_cet"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_54"
+        android:background="@color/white"
+        android:hint="@string/please_input_new_pwd_again"
+        android:paddingLeft="@dimen/view_space_18"
+        android:textCursorDrawable="@drawable/shape_text_cursor_drawable"
+        android:paddingRight="@dimen/view_space_18"
+        android:textColor="@color/T2"
+        android:textColorHint="@color/T6"
+        android:inputType="textPassword"
+        android:textSize="@dimen/text_size_16"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size_0.5"
+        android:layout_marginLeft="@dimen/view_space_18"
+        android:layout_marginRight="@dimen/view_space_18"
+        android:background="@color/D6"
+        />
+    <Button
+        android:id="@+id/confirm_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_44"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/view_space_8"
+        android:layout_marginLeft="@dimen/view_space_22"
+        android:layout_marginRight="@dimen/view_space_22"
+        android:layout_marginTop="@dimen/view_space_40"
+        android:background="@drawable/login_btn_bg"
+        android:text="@string/confirm_submission"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_16"
+        style="?android:attr/borderlessButtonStyle"
+        />
+</LinearLayout>

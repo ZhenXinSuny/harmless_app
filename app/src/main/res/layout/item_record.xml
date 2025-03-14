@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+
+
+
+
+    <LinearLayout
+        android:layout_marginStart="@dimen/view_space_16"
+        android:layout_marginTop="@dimen/view_height_12"
+        android:layout_marginBottom="@dimen/view_height_12"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/view_space_2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="审核状态："
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginStart="@dimen/view_space_2"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <LinearLayout
+                android:id="@+id/status_ll"
+                android:background="@drawable/dai_apply_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="待审核"
+                    android:gravity="right"
+                    android:textColor="@color/white"
+                    android:id="@+id/status_tv"
+                    android:textSize="@dimen/text_size_12"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/view_space_2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="收集单号："
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginStart="@dimen/view_space_2"
+
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:id="@+id/collection_no_tv"
+                tools:text="刘振新"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginStart="@dimen/view_space_2"
+
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            </TextView>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/view_space_2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="养殖场户："
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginStart="@dimen/view_space_2"
+
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:id="@+id/xdr_name_tv"
+                tools:text="刘振新"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginStart="@dimen/view_space_2"
+
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/view_space_2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="联系电话："
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginStart="@dimen/view_space_2"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:id="@+id/xdr_iphone_num_tv"
+                tools:text="刘振新"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginStart="@dimen/view_space_2"
+
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="@dimen/view_space_2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="收集场所："
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginStart="@dimen/view_space_2"
+
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:id="@+id/collection_factroy_tv"
+                tools:text="刘振新"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginStart="@dimen/view_space_2"
+
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="@dimen/view_space_2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="申报地址："
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginStart="@dimen/view_space_2"
+
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:id="@+id/apply_region_name_tv"
+                tools:text="刘振新"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginStart="@dimen/view_space_2"
+
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            </TextView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/view_space_2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="车牌号码："
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginStart="@dimen/view_space_2"
+
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:id="@+id/car_num_tv"
+                tools:text="刘振新"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginStart="@dimen/view_space_2"
+
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="@dimen/view_space_2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="动物种类："
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginStart="@dimen/view_space_2"
+
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:id="@+id/animal_tv"
+                tools:text="刘振新"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginStart="@dimen/view_space_2"
+                android:textColor="@color/J5"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="@dimen/view_space_2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="收集时间："
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginStart="@dimen/view_space_2"
+
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:id="@+id/collection_times_tv"
+                tools:text="刘振新"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginStart="@dimen/view_space_2"
+
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            </TextView>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/btn_ll"
+            android:layout_marginTop="@dimen/view_space_10"
+            android:orientation="horizontal"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/detail_btn"
+                android:background="@drawable/check_bg_apply"
+                android:layout_gravity="right"
+                android:text="查看详细"
+                android:textSize="@dimen/text_size_12"
+                android:textColor="@color/J5"
+                android:layout_marginRight="@dimen/view_space_14"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/view_height_30">
+            </Button>
+
+
+
+
+            <Button
+                android:id="@+id/check_btn"
+                android:background="@drawable/bo_bg_fillet"
+                android:layout_gravity="right"
+                android:text="驳回修改"
+                android:textColor="@color/C12"
+                android:textSize="@dimen/text_size_12"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/view_height_30">
+            </Button>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size_0.5"
+        android:layout_marginStart="@dimen/view_space_16"
+        android:layout_marginEnd="@dimen/view_space_16"
+        android:background="@color/D2"
+        />
+</LinearLayout>

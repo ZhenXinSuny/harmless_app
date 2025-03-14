@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="@dimen/view_space_12"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/view_space_12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_16"
+            android:id="@+id/sj_ren_tv"
+            android:text="入库单号："
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+        <TextView
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_16"
+            android:id="@+id/ruku_dh_tv"
+            tools:text="CL-20221008110528-259582"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/view_space_12"
+        android:layout_marginTop="@dimen/view_height_8"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_16"
+            android:text="入库人员："
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+        <TextView
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_16"
+            android:id="@+id/rkr_tv"
+            android:layout_weight="1"
+            tools:text="特朗普"
+
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_16"
+            android:id="@+id/rk_times"
+            android:layout_marginRight="@dimen/view_space_12"
+            tools:text="2022-09-09 09:09:09"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/view_space_12"
+        android:layout_marginTop="@dimen/view_height_8"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_16"
+            android:text="消毒用品："
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+        <TextView
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_16"
+            android:id="@+id/rukusl_tv"
+            tools:text="666"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+    </LinearLayout>
+
+    <View
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size_0.5"
+        android:layout_marginTop="@dimen/view_space_10"
+        android:layout_marginLeft="@dimen/view_space_12"
+        android:background="@color/D1"
+        />
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+                     

@@ -1,0 +1,66 @@
+<resources>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="send_sms">获取动态密码</string>
+    <string name="input_phone">请输入手机号</string>
+    <string name="input_password">请输入密码</string>
+    <string name="input_verification">请输入动态密码</string>
+    <string name="sms_time">%1$ss</string>
+    <string name="tips_string">注释：畜种选择为猪时，重量输入≥20kg耳标为可输入状态，＜20kg耳标为不可输入状态以“-”表示填充。</string>
+    <string name="_5kg"><![CDATA[<5kg]]></string>
+    <string name="dialog_msg">1.修改已知Bug\n2.优化代码，提高操作体验\n3.删除多余资源，减少Apk体积</string>
+    <string name="user_agreement">用户协议</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="app_version">智慧动监v%1$s</string>
+<!--   <string name="app_version">成都无害化处理系统v%1$s</string>-->
+    <string name="show_privacy_message"> "   感谢您对本公司的支持!本公司非常重视您的个人信息和隐私保护。"
+                "为了更好地保障您的个人权益，在您使用我们的产品前，"
+                "请务必审慎阅读《隐私政策》和《用户协议》内的所有条款，"
+                "尤其是:\n"
+                "  1.我们对您的个人信息的收集/保存/使用/对外提供/保护等规则条款，以及您的用户权利等条款;\n"
+                "  2.约定我们的限制责任、免责条款。\n"
+                "您点击“同意并继续”的行为即表示您已阅读完毕并同意以上协议的全部内容。"
+                "如您同意以上协议内容，请点击“同意”，开始使用我们的产品和服务!"</string>
+    <string name="footer_nothing">我是有底线的~</string>
+    <string name="read_and_accept">请勾选阅读并同意</string>
+    <string name="service_agreement_2">《用户协议》</string>
+    <string name="service_agreement_3">《隐私协议》</string>
+    <string name="_86">+86</string>
+    <string name="service_agreementtv">请先阅读并接受《用户协议》和《隐私政策》</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="select_from_album">从相册选取</string>
+    <string name="take_pictures">拍照</string>
+    <string name="common_arror_right">></string>
+    <string name="immune_menu_title">防疫信息填报</string>
+
+
+    <string name="isok">确认</string>
+    <string name="isno">取消</string>
+    <string name="security_title">为了提高账号安全性，保证账号安全，请完成安全验证修改密码后登录</string>
+    <string name="verification_code_was_sent_to">验证码已发送至</string>
+    <string name="send">重新发送</string>
+    <string name="new_pwd_title">请设置新的登录密码，需8-20位字符，至少包含字母/数字/符号2种组合</string>
+    <string name="please_input_new_pwd">请输入密码</string>
+    <string name="please_input_new_pwd_again">请再次输入密码</string>
+    <string name="confirm_submission">确认提交</string>
+    <string name="recycler">回收人员：</string>
+    <string name="recovery_time">回收单位：</string>
+    <string name="time_has_exceeded_cannot_be_modified">当前数据入场时间已经超过一小时，无法修改</string>
+    <string name="number_animals_matches">动物数量是否符合</string>
+    <string name="actual_quantity">实际数量：</string>
+    <string name="deaths_num">死亡数量：</string>
+    <string name="abnormal_quantity">异常数量：</string>
+    <string name="entry_check_change_log">入场查验修改日志</string>
+    <string name="the_current_data_is_not_modified">当前数据暂无修改日志</string>
+    <string name="the_slaughterhouse_has_carried_out">当前屠宰场已进行屠宰检疫申报，无法修改</string>
+    <string name="wearing_labels_for_epidemic_prevention">防疫补戴标</string>
+    <string name="query_tv">查询</string>
+    <string name="no_data_tips">暂无数据</string>
+    <string name="return_tv">返回</string>
+    <string name="replace_ear_tags">补戴耳标</string>
+    <string name="the_number_of_ear_tags_to_be_replaced_cannot_exceed">*本次补戴标不能超过之前的耳标免疫数量%1$d个</string>
+    <string name="enter_the_filler_label_segment">输入补戴耳标号段</string>
+    <string name="commit_the_filler_label_segment">提交补戴耳标信息</string>
+    <string name="close_speed_dial_menu">Close Speed Dial menu</string>
+</resources>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/view_space_8"
+    android:clickable="true"
+    android:background="@drawable/reported_barrier_bg"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/view_space_6"
+        android:layout_marginBottom="@dimen/view_space_8"
+        android:layout_marginStart="@dimen/view_space_8"
+        android:layout_marginRight="@dimen/view_space_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="检疫证号:"
+            android:layout_marginLeft="@dimen/view_space_8"
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_14" />
+
+
+        <EditText
+            android:layout_marginTop="@dimen/view_space_8"
+            android:id="@+id/search_quarantine_et"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_space_40"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/view_height_8"
+            android:layout_marginRight="@dimen/view_space_12"
+
+            android:layout_weight="1"
+            android:background="@drawable/edittext_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="left|center"
+            android:hint="请输入检疫证号"
+            android:paddingLeft="@dimen/view_space_8"
+            android:textColor="@color/T2"
+            android:textColorHint="@color/T2"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/view_space_6"
+        android:layout_marginBottom="@dimen/view_space_8"
+        android:layout_marginStart="@dimen/view_space_8"
+        android:layout_marginRight="@dimen/view_space_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="入场时间:"
+            android:layout_marginLeft="@dimen/view_space_8"
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_14" />
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/view_space_8"
+            android:id="@+id/give_eartag_age"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/view_space_10"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/view_space_6">
+
+            <TextView
+                android:textColor="@color/T6"
+                android:id="@+id/start_time_tv"
+                android:background="@drawable/edittext_bg"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/view_height_40"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:maxLength="10"
+                android:textSize="@dimen/text_size_16" />
+
+            <TextView
+                android:textSize="@dimen/text_size_16"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/view_space_4"
+                android:layout_marginLeft="@dimen/view_space_4"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="到" />
+
+            <TextView
+                android:id="@+id/end_time_tv"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/T6"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/view_height_40"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:maxLength="10"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/view_space_6"
+        android:layout_marginBottom="@dimen/view_space_8"
+        android:layout_marginStart="@dimen/view_space_8"
+        android:layout_marginRight="@dimen/view_space_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="合格状态:"
+            android:layout_marginLeft="@dimen/view_space_8"
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_14" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_marginLeft="@dimen/view_space_10"
+            android:layout_marginTop="@dimen/view_space_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal" >
+            <RadioButton
+                android:onClick="onRadioButtonClicked"
+                android:id="@+id/qualified_yes_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_16"
+                android:textColor="@color/T6"
+                android:text="合格" />
+            <RadioButton
+                android:onClick="onRadioButtonClicked"
+                android:id="@+id/qualified_no_rb"
+                android:layout_marginLeft="@dimen/view_space_12"
+                android:textSize="@dimen/text_size_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/T6"
+                android:text="不合格" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/view_space_12"
+        android:orientation="horizontal"
+        android:layout_marginRight="@dimen/view_space_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/no_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/view_space_38"
+            android:layout_marginLeft="@dimen/view_height_30"
+            android:layout_marginRight="@dimen/view_space_10"
+            android:layout_weight="1"
+            android:background="@drawable/selector_common_btn_red"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16">
+        </Button>
+
+        <Button
+            android:layout_weight="1"
+            android:text="查询"
+            android:layout_marginLeft="@dimen/view_space_10"
+            android:id="@+id/sure_btn"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/white"
+            android:layout_marginRight="@dimen/view_height_30"
+            android:background="@drawable/ripple_login"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/view_space_38">
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

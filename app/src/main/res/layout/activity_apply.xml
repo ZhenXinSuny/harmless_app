@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:showDividers="middle">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/titleBarHeight_48"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/titlebar_left"
+            android:layout_width="@dimen/view_space_22"
+            android:src="@drawable/title_back"
+            android:layout_marginStart="@dimen/view_space_12"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true" />
+
+        <com.agridata.cdzhdj.view.ScrollForeverTextView
+            android:id="@+id/titlebar_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="无害化申报"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/daili_apply_tv"
+            android:layout_marginTop="@dimen/view_space_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/J5"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/view_space_10"
+            android:layout_marginLeft="@dimen/view_space_12"
+            android:text="代理申报"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_16"/>
+    </RelativeLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_below="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size_0.5"
+        android:background="@color/D1"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/times_ll"
+        android:layout_below="@+id/view"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="@dimen/view_space_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/view_space_10"
+            android:text="按时间选择"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_16"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginTop="@dimen/view_space_6"
+                android:id="@+id/give_eartag_age"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/view_space_6">
+                <TextView
+                    android:textColor="@color/T2"
+                    android:id="@+id/start_time_tv"
+                    android:background="@drawable/edittext_bg_fillet"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/view_space_38"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:layout_marginRight="@dimen/view_space_6"
+                    android:layout_gravity="center"
+                    android:maxLength="10"
+                    android:textSize="@dimen/text_size_16" />
+
+                <View
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/view_space_16"
+                    android:layout_height="@dimen/divider_size_0.5"
+                    android:background="@color/D1"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/end_time_tv"
+                    android:background="@drawable/edittext_bg_fillet"
+                    android:textColor="@color/T2"
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="@dimen/view_space_6"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/view_space_38"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:textSize="@dimen/text_size_16" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+        <Button
+            android:id="@+id/query_btn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_space_38"
+            android:layout_marginTop="@dimen/view_space_8"
+            android:layout_marginStart="@dimen/view_height_88"
+            android:layout_marginEnd="@dimen/view_height_88"
+            android:layout_weight="1"
+            android:background="@drawable/query_bg_fillet"
+            android:lineSpacingExtra="@dimen/view_space_20"
+            android:lineSpacingMultiplier="1.5"
+            android:text="确 认 查 询"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14" />
+
+    </LinearLayout>
+
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_below="@+id/times_ll"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/group_task_tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="@color/J5"
+                app:tabIndicatorFullWidth="false"
+                app:tabBackground="@android:color/transparent"
+                app:tabRippleColor="@android:color/transparent"
+                app:tabSelectedTextColor="@color/J5"
+                app:tabIndicator="@drawable/shape_tab_indicator_xdr_info"
+                app:tabTextAppearance="@style/TabLayoutTextStyle"
+                app:tabTextColor="@color/black"
+                />
+
+            <com.agridata.cdzhdj.view.NoScrollViewPager
+                android:layout_below="@+id/law_tab_layout"
+                android:id="@+id/fragment_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/navdrawer"
+            android:layout_width="@dimen/view_space_300"
+            android:layout_height="fill_parent"
+            android:layout_gravity="end"
+            layout="@layout/item_query_times" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/extendedFab"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.MaterialComponents"
+        android:contentDescription="extended_fab_content_desc"
+        android:text="代理申报"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="@dimen/text_size_14"
+        android:layout_marginEnd="@dimen/view_space_12"
+        android:layout_marginBottom="@dimen/view_height_60"
+        app:elevation="10dp"
+        style="@style/FabButton.Green"
+        app:icon="@drawable/ic_add"
+        app:iconPadding="10dp"
+        app:iconSize="22dp"
+        app:iconTint="@color/white"
+        app:pressedTranslationZ="10dp"
+/>
+
+
+
+
+</RelativeLayout>

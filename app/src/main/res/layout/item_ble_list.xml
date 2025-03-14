@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="@dimen/view_height_36">
+        <TextView
+            android:id="@+id/tv_scanname"
+
+            android:layout_width="wrap_content"
+            android:text="威威"
+            android:textSize="@dimen/text_size_14"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            />
+
+
+    </LinearLayout>
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size_1"
+        android:background="@color/D2" />
+
+</LinearLayout>

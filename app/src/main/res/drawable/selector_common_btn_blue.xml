@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 设置形状为矩形 -->
+    <solid android:color="@android:color/transparent"/> <!-- 中间区域为透明 -->
+
+    <!-- 设置边框颜色和宽度 -->
+    <stroke
+        android:color="@color/J5"
+        android:width="0.5dp" />
+
+    <!-- 设置圆角 -->
+    <corners android:radius="4dp"/> <!-- 圆角半径 -->
+
+    <!-- 可选：如果需要点击时改变颜色，可以在这里定义一个选择器selector -->
+</shape>

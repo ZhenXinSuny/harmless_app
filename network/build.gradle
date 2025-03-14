@@ -1,0 +1,87 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        minSdk 24
+        targetSdk 31
+
+        flavorDimensions ""
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "cd_def"]
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+
+
+    productFlavors {
+        chengdu {//https://www.cdzhdj.cn/v3.0/   https://www.cdzhdj.cn/v3.0/api/
+
+//
+//            buildConfigField "String", "baseUrlWanBei", "\"http://cdxc.8918.biz/v3.0/api/\" "
+//            buildConfigField "String", "baseUrl", "\"http://cdxc.8918.biz/harmless/\" "
+//            buildConfigField "String", "baseUrlImg", "\"http://cdxc.8918.biz/vbfs/storage/\" "
+//            buildConfigField "String", "baseUrlSendSms", "\"http://cdxc.8918.biz/\" "
+//            buildConfigField "String", "baseUrlAhiapi", "\"http://cdxc.8918.biz/\" "
+//            buildConfigField "String", "baseUrlTest", "\"http://cdxc.8918.biz/\" "
+
+            buildConfigField "String", "baseUrlWanBei", "\"https://www.cdzhdj.cn/v3.0/api/\" "
+            buildConfigField "String", "baseUrl", "\"https://www.cdzhdj.cn/harmless/\" "
+            buildConfigField "String", "baseUrlImg", "\"https://www.cdzhdj.cn//vbfs/storage/\" "
+            buildConfigField "String", "baseUrlSendSms", "\"https://www.cdzhdj.cn/\" "
+            buildConfigField "String", "baseUrlAhiapi", "\"https://www.cdzhdj.cn/\" "
+            buildConfigField "String", "baseUrlTest", "\"https://www.cdzhdj.cn/\" "
+
+//            buildConfigField "String", "baseUrlWanBei", "\"http://222.212.139.212:9002/v3.0/api/\" "
+//            buildConfigField "String", "baseUrl", "\"http://222.212.139.212:9002/harmless/\" "
+//            buildConfigField "String", "baseUrlImg", "\"http://222.212.139.212:9002/vbfs/storage/\" "
+//            buildConfigField "String", "baseUrlSendSms", "\"http://222.212.139.212:9002/\" "
+//            buildConfigField "String", "baseUrlAhiapi", "\"http://222.212.139.212:9002/\" "
+//            buildConfigField "String", "baseUrlTest", "\"http://222.212.139.212:9002/\" "
+
+        }
+
+        sichuan {
+            buildConfigField "String", "baseUrlWanBei", "\"http://192.173.1.119:8000/v3.0/api/\" "
+            buildConfigField "String", "baseUrl", "\"http://192.173.1.119:8000/harmless/\" "
+            buildConfigField "String", "baseUrlImg", "\"http://192.173.1.119:8000/vbfs/storage/\" "
+            buildConfigField "String", "baseUrlSendSms", "\"http://192.173.1.119.195:8000/\" "
+        }
+        productFlavors.all { flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    // 网络组件
+    api 'com.squareup.retrofit2:retrofit:2.9.0'
+    api 'com.squareup.retrofit2:converter-gson:2.8.1'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.7.2'
+    api 'com.squareup.retrofit2:converter-scalars:2.5.0'
+    api 'com.squareup.okhttp3:logging-interceptor:4.7.2'
+    api 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.uber.autodispose:autodispose-android-archcomponents:1.3.0'
+
+    implementation 'com.elvishew:xlog:1.6.1'
+}

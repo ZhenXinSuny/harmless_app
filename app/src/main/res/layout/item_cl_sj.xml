@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="@dimen/view_space_12"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/view_space_12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_16"
+            android:id="@+id/sj_ren_tv"
+            android:text="收集单号："
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+        <TextView
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_16"
+            android:id="@+id/sj_dh_tv"
+            tools:text="CL-20221008110528-259582"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/view_space_12"
+        android:layout_marginTop="@dimen/view_height_8"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_16"
+            android:text="收集人员："
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+        <TextView
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_16"
+            android:id="@+id/sjr_tv"
+            android:layout_weight="1"
+            tools:text="特朗普"
+
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+
+
+        <TextView
+            android:textColor="@color/J6"
+            android:textSize="@dimen/text_size_16"
+            android:id="@+id/sj_shuliang_tv"
+            android:layout_marginRight="@dimen/view_space_12"
+            tools:text="2022-09-09 09:09:09"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/view_space_12"
+        android:layout_marginTop="@dimen/view_height_8"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_16"
+            android:text="收集车牌："
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+        <TextView
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_16"
+            android:id="@+id/sjcp_tv"
+            android:layout_weight="1"
+            tools:text="666"
+
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/view_space_12"
+        android:layout_marginTop="@dimen/view_height_8"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_16"
+            android:text="收集时间："
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_16"
+            android:id="@+id/sj_times"
+            android:layout_marginRight="@dimen/view_space_12"
+            tools:text="2022-09-09 09:09:09"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+    </LinearLayout>
+    <View
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size_0.5"
+        android:layout_marginTop="@dimen/view_space_6"
+        android:layout_marginLeft="@dimen/view_space_12"
+        android:background="@color/D1"
+        />
+</LinearLayout>

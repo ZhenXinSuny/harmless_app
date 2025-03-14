@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.agridata.cdzhdj",
+  "variantName": "chengduRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 2,
+      "versionName": "1.7.2.8",
+      "outputFile": "ZHDJApp_chengdu_V1.7.2.8_2025-03-10.07.14.47_.apk"
+    }
+  ],
+  "elementType": "File"
+}

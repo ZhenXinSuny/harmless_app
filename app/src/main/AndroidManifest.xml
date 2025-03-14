@@ -1,0 +1,1142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.agridata.cdzhdj">
+
+    <queries>
+        <package android:name="com.smartahc.android.aiot.driver" />
+    </queries>
+
+    <!-- 定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <!-- 网络相关权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- 存储权限（适配 Android 13 及以上）-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+    <!-- 蓝牙相关权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="neverForLocation" tools:targetApi="s" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+
+    <!-- 摄像头权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <!-- 通讯录权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- 系统相关权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- 安装包和通知相关权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.NOTIFICATION_SERVICE" />
+
+    <!-- Android 13 存储权限适配 -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <!-- 前台服务和通知 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+
+
+    <queries package="${applicationId}">
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE"></action>
+        </intent>
+        <intent>
+            <action android:name="android.media.action.ACTION_VIDEO_CAPTURE"></action>
+        </intent>
+    </queries>
+
+    <!--    android:icon="@drawable/ic_whh"-->
+    <application
+        android:name="com.agridata.cdzhdj.base.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/old_applogo_pic"
+        android:label="@string/app_name"
+        android:maxAspectRatio="2.4"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/BaseAppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon,android:theme">
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+        <!--适配华为（huawei）刘海屏-->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+        <!--适配小米（xiaomi）刘海屏-->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="7f48ebb5f7b2826296e5bf6ac657d6ca" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <meta-data android:name="TencentMapSDK" android:value="CQZBZ-YUCEH-6AEDL-WOWVX-ITSCH-MOBW5" />
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.agridata.cdzhdj.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider" />
+        </provider>
+
+        <activity
+
+            android:name=".activity.welcome.WelComeActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="64ab9974bd4b621232cdf976" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.harmless.CollectFillInActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activity.harmless.AddAnimalMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+        <!-- 签名 -->
+        <activity
+            android:name=".activity.harmless.SignActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity
+            android:name=".activity.harmless.JianDuYuanWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.harmless.JianDuYuanSignActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+
+        <activity
+            android:name=".activity.harmless.xdr.XdrWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".activity.harmless.shouYun.ShouYunWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.harmless.whhAdnim.WhhAdnimWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.harmless.ChuLi.ChuLiWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".activity.harmless.CanYuWu.CanYuWuWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".activity.harmless.xcsh.XianChangShenHeWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".activity.harmless.zcsh.ZhuChangShenHeWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <activity
+            android:name=".activity.harmless.edit.CollectEditFillInActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".activity.mine.pic.PicActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".activity.harmless.dianhuashenbao.DianHuaShenBaoWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <activity
+            android:name=".activity.xiaqu.XiaQuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <activity
+            android:name=".activity.mine.setting.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".activity.mine.setting.AboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".activity.mine.AgreementActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <activity
+            android:name=".activity.harmless.regionAdmin.RegionAdminActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".activity.harmless.regionAdmin.tbcollected.ToBeCollectedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme" />
+
+
+        <activity
+            android:name=".activity.mine.head.HeadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <activity
+            android:name=".activity.harmless.regionAdmin.region.SelectAreaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".activity.epidemic.EpidemicHomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".activity.harmless.regionAdmin.tbcollected.ToBeCollectedDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 已收集页面 -->
+        <activity
+            android:name=".activity.harmless.regionAdmin.collected.CollectedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 已收集详情页面 -->
+        <activity
+            android:name=".activity.harmless.regionAdmin.collected.CollectedDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 入库列表-->
+        <activity
+            android:name=".activity.harmless.regionAdmin.ruku.RuKuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 入库列表-->
+        <activity
+            android:name=".activity.harmless.regionAdmin.ruku.RuKuDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!-- 处理列表-->
+        <activity
+            android:name=".activity.harmless.regionAdmin.chuli.ChuLiActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 处理列表详情-->
+        <activity
+            android:name=".activity.harmless.regionAdmin.chuli.ChuLiDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 处理列表详情(入库收集列表)-->
+        <activity
+            android:name=".activity.harmless.regionAdmin.chuli.ChuLiShouJiListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 无害化处理收集记录-->
+        <activity
+            android:name=".activity.harmless.regionAdmin.collect_record.CollectRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 无害化处理入库记录-->
+        <activity
+            android:name=".activity.harmless.regionAdmin.inventoryrecord.InventoryRecordsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 无害化处理历史收集页面-->
+        <activity
+            android:name=".activity.harmless.regionAdmin.historical_collection.HistoricalCollectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 病死畜禽饼状图-->
+        <activity
+            android:name=".activity.harmless.regionAdmin.bzt.BZTActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 病死动物数据展示-->
+        <activity
+            android:name=".activity.harmless.regionAdmin.bsduzs.BsdwZsWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 病死动物数据展示-->
+        <activity
+            android:name=".activity.harmless.regionAdmin.xdr.XdrListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 养殖户列表详情页-->
+        <activity
+            android:name=".activity.harmless.regionAdmin.xdr.xdrcollect.XdrInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 数据同步-->
+        <activity
+            android:name=".activity.epidemic.updata.UpDataInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 免疫-->
+        <activity
+            android:name=".activity.epidemic.immune.ImmuneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!-- 免疫畜主界面-->
+        <activity
+            android:name=".activity.epidemic.xdr.ImmuneXdrListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 耳标界面-->
+        <activity
+            android:name=".activity.epidemic.eartag.EarTagActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 手动录入耳标界面-->
+        <activity
+            android:name=".activity.epidemic.eartag.ManualEntryEarTagActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 手动录入耳标界面-->
+        <activity
+            android:name=".activity.epidemic.ImmuneMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!-- 疫苗免疫界面 -->
+        <activity
+            android:name=".activity.epidemic.vaccine.VaccineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 低功耗蓝牙 -->
+        <activity
+            android:name=".activity.epidemic.eartag.lowble.LowBluetoothActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 低功耗蓝牙 -->
+        <activity
+            android:name=".activity.epidemic.eartag.lowble.ConnBlueToothActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 查询免疫记录 -->
+        <activity
+            android:name=".activity.epidemic.immune.query.QueryImmuneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 查询免疫记录详细 -->
+        <activity
+            android:name=".activity.epidemic.immune.query.QueryImmuneDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 修改免疫信息 -->
+        <activity
+            android:name=".activity.epidemic.immune.updata.UpDataImmuneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!-- 修改免疫疫苗信息 -->
+        <activity
+            android:name=".activity.epidemic.immune.updata.UpDataVaccineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 入场查验 -->
+        <activity
+            android:name=".activity.entrycheck.check.EntryCheckActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!-- 入场查验检疫证详细 -->
+        <activity
+            android:name=".activity.entrycheck.details.CertNoDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 蓝牙 -->
+        <activity
+            android:name=".activity.entrycheck.ble.tagreader.TagReaderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 蓝牙 -->
+        <activity
+            android:name=".activity.entrycheck.ble.tagreader.TagReaderBlueToothActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 查看抽查详细页面 -->
+        <activity
+            android:name=".activity.entrycheck.CheckValueActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!-- 查看抽查详细页面 -->
+        <activity
+            android:name=".activity.entrycheck.ble.lowble.LowBleEarTagActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 检疫主界面 -->
+        <activity
+            android:name=".activity.quarantine.QuarantineMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 检疫页面 -->
+        <activity
+            android:name=".activity.quarantine.QuarantineWebAcceptViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 检疫历史 -->
+        <activity
+            android:name=".activity.quarantine.QuarantineWebHistoryViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 检疫申报 -->
+        <activity
+            android:name=".activity.quarantine.QuarantineWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 耳标发放 -->
+        <activity
+            android:name=".activity.epidemic.receiptrelease.EarTagOutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 耳标签收 -->
+        <activity
+            android:name=".activity.epidemic.receiptrelease.EarTagSignActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 绑定相对人列表-->
+        <activity
+            android:name=".activity.harmless.xdrbind.XdrBindListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 绑定相对人列表-->
+        <activity
+            android:name=".activity.harmless.xdrbind.XdrBindListQueryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 生猪检疫管理-->
+        <activity
+            android:name=".activity.farm.pigsqm.PigsQMActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 执法检查 -->
+        <activity
+            android:name=".activity.farm.pigsqm.enforcementcheck.LawEnforcementCheckMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 执法检查列表 -->
+        <activity
+            android:name=".activity.farm.pigsqm.enforcementcheck.report.LawEnforcementCheckListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 填报 -->
+        <activity
+            android:name=".activity.farm.pigsqm.enforcementcheck.report.LawReportActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 签名 -->
+        <activity
+            android:name=".activity.farm.pigsqm.enforcementcheck.report.SignCheckActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 执法抽查信息填报 -->
+        <activity
+            android:name=".activity.farm.pigsqm.enforcementcheck.spot.LawReportSpotCheckActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!-- 抽查签名 -->
+        <activity
+            android:name=".activity.farm.pigsqm.enforcementcheck.spot.SignSpotCheckActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 抽查主页 -->
+        <activity
+            android:name=".activity.farm.pigsqm.enforcementcheck.spot.LawReportSpotCheckMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 指派主页 -->
+        <activity
+            android:name=".activity.farm.pigsqm.enforcementcheck.reviewassignment.ReviewAssignmentMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 复查指派 -->
+        <activity
+            android:name=".activity.farm.pigsqm.enforcementcheck.reviewassignment.AssignmentPersonActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!-- 添加xdr -->
+        <activity
+            android:name=".activity.epidemic.xdr.AddXdrWebActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 执法检查详细 -->
+        <activity
+            android:name=".activity.farm.pigsqm.enforcementcheck.details.EnforcementDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 领域详情 -->
+        <activity
+            android:name=".activity.farm.pigsqm.enforcementcheck.details.RealmDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 待办事项 -->
+        <activity
+            android:name=".activity.farm.pigsqm.enforcementcheck.todolist.ToDoListMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 复查填报 -->
+        <activity
+            android:name=".activity.farm.pigsqm.enforcementcheck.todolist.ReviewInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 复查填报 -->
+        <activity
+            android:name=".activity.farm.pigsqm.enforcementcheck.todolist.SignReviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 抽查详细 -->
+        <activity
+            android:name=".activity.farm.pigsqm.enforcementcheck.details.SpotCheckDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 抽查填报 -->
+        <activity
+            android:name=".activity.farm.pigsqm.enforcementcheck.todolist.ReviewRegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!-- 生猪养殖投入品 -->
+        <activity
+            android:name=".activity.farm.pigbreedinginputs.PigBreedingInputsMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 饲料入库 -->
+        <activity
+            android:name=".activity.farm.pigbreedinginputs.feed.FeedStorageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 饲料入库添加页面 -->
+        <activity
+            android:name=".activity.farm.pigbreedinginputs.feed.AddFeedStorageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 饲料入库详细 -->
+        <activity
+            android:name=".activity.farm.pigbreedinginputs.feed.FeedStorageDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 兽药列表 -->
+        <activity
+            android:name=".activity.farm.pigbreedinginputs.veterinarydrug.VeterinaryDrugActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 兽药添加 -->
+        <activity
+            android:name=".activity.farm.pigbreedinginputs.veterinarydrug.AddVeterinaryDrugActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 兽药详情 -->
+        <activity
+            android:name=".activity.farm.pigbreedinginputs.veterinarydrug.VeterinaryDrugDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!-- 物品出库 -->
+        <activity
+            android:name=".activity.farm.pigbreedinginputs.goodsout.GoodsOutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".activity.farm.pigbreedinginputs.goodsout.AddGoodsOutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!-- 物品出库详细 -->
+        <activity
+            android:name=".activity.farm.pigbreedinginputs.goodsout.GoodsOutDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 备案审核 -->
+        <activity
+            android:name=".activity.epidemic.xdr.CheckXdrListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!-- 屠宰场备案 -->
+        <activity
+            android:name=".activity.entrycheck.bindslaughterhouse.BindSlaughterhouseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 屠宰场备案 -->
+        <!-- 渔业养殖管理 -->
+        <activity
+            android:name=".activity.farm.fishery.FishMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 禁渔-->
+        <activity
+            android:name=".activity.farm.fishery.banfishing.BanFishingMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!-- 生猪防疫管理-->
+        <activity
+            android:name=".activity.farm.pigepidemic.PigEpidemicMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 疫苗管理-->
+        <activity
+            android:name=".activity.farm.pigepidemic.vaccinemanagement.VaccineManagementMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 发放养殖场户-->
+        <activity
+            android:name=".activity.farm.pigepidemic.vaccinemanagement.IssueXdrActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.farm.pigepidemic.vaccinemanagement.XdrCheckActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 畜禽资源管理-->
+        <activity
+            android:name=".activity.farm.beastsbirds.BeastsBirdsMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 畜禽种资质源目录-->
+        <activity
+            android:name=".activity.farm.beastsbirds.BeastsBirdSWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!-- 投入品领用申请-->
+        <activity
+            android:name=".activity.farm.pigbreedinginputs.Inputgoodsreceived.InputGoodsReceivedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 投入品领用审批-->
+        <activity
+            android:name=".activity.farm.pigbreedinginputs.Inputgoodsreceived.CheckGoodsReceivedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!-- 物品统计-->
+        <activity
+            android:name=".activity.farm.pigbreedinginputs.statistics.GoodsStatisticsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!-- 物品盤點-->
+        <activity
+            android:name=".activity.farm.pigbreedinginputs.inventory.GoodsInventoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!-- 水生野生动物名录查询-->
+        <activity
+            android:name=".activity.farm.fishery.banfishing.AquaticWildlifeWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 禁渔区名录查询-->
+        <activity
+            android:name=".activity.farm.fishery.banfishing.NoFishAreaWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 生猪育肥体系-->
+        <activity
+            android:name=".activity.farm.map.ShengZhuYuFeiMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 生猪育肥体系-->
+        <activity
+            android:name=".activity.farm.map.ShengZhuYuFeiWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!-- 生猪繁育体系-->
+        <activity
+            android:name=".activity.farm.map.ShengZhuFanYuFeiMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 生猪繁育体系-->
+        <activity
+            android:name=".activity.farm.map.ShengZhuFanYuiWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 先打后补-->
+        <activity
+            android:name=".activity.farm.pigepidemic.makeuplater.MakeUpLaterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 先打后补webview-->
+        <activity
+            android:name=".activity.farm.pigepidemic.makeuplater.MakeUpLaterWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <activity
+            android:name=".activity.farm.pigepidemic.makeuplater.MakeUpLaterApplyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <activity
+            android:name=".activity.farm.pigepidemic.makeuplater.MakeUpLaterCheckActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!--        疫苗瓶回收-->
+        <activity
+            android:name=".activity.farm.pigepidemic.vaccinevialrecovery.VaccineVialRecoveryWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!--        免疫受理+ 驳回 -->
+        <activity
+            android:name=".activity.farm.pigepidemic.map.MianYiMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!--      无害化新增页面 demo -->
+        <activity
+            android:name=".activity.farm.map.WhhDemoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!--      执法办法  demo -->
+        <activity
+            android:name=".activity.farm.pigsqm.handlercase.HandlerCaseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!--  修改密码验证  -->
+        <activity
+            android:name=".activity.mine.setting.securityverification.SecurityVerificationActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+
+        <!--  修改密码 -->
+        <activity
+            android:name=".activity.mine.setting.changepwd.ChangePwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!--  查验记录详细列表 -->
+        <activity
+            android:name=".activity.entrycheck.history.EntryCheckHisToryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!--  查验记录详细 -->
+        <activity
+            android:name=".activity.entrycheck.history.EntryCheckHisToryDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!--  收集主页  -->
+        <activity
+            android:name=".activity.harmless.CollectionMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!--  统计  -->
+        <activity
+            android:name=".activity.harmless.statistic.StatisticsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!--  申报  -->
+        <activity
+            android:name=".activity.harmless.collection.ApplyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!--  收集数据提交  -->
+        <activity
+            android:name=".activity.harmless.offlinesubmission.OfflineSubmissionCollectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!--  收集数据详细  -->
+        <activity
+            android:name=".activity.harmless.offlinesubmission.OfflineSubmissionCollectionDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!--  收集主页面  -->
+        <activity
+            android:name=".activity.harmless.record.RecordMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!--  收集主页面  -->
+        <activity
+            android:name=".activity.harmless.ShuiYinZhaoPianActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!--  无纸化出证  -->
+        <activity
+            android:name=".activity.quarantine.PaperlessCertificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <!--  入场查验数据修改  -->
+        <activity
+            android:name=".activity.entrycheck.revise.ReviseEntryCheckActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!--  入场查验数据修改日志列表  -->
+        <activity
+            android:name=".activity.entrycheck.loglist.LogEntryCheckActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!--  防疫补戴标列表  -->
+        <activity
+            android:name=".activity.epidemic.immune.patch.ImmunePatchCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!--  防疫补戴标  -->
+        <activity
+            android:name=".activity.epidemic.immune.patch.ImmunePatchCodeCommitActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <activity
+            android:name=".activity.epidemic.immune.patch.ImmunePatchEarTagActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".activity.harmless.xcsh.OnSiteAuditHarmlessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".activity.epidemic.xdr.XdrEditWebViewActivity"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 核心服务 -->
+        <service android:name=".service.CoreService" />
+
+    </application>
+
+</manifest>

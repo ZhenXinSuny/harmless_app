@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/titleBarHeight_48"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/titlebar_left"
+            android:layout_width="@dimen/view_space_22"
+            android:src="@drawable/title_back"
+            android:layout_marginStart="@dimen/view_space_12"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true" />
+
+        <com.agridata.cdzhdj.view.ScrollForeverTextView
+            android:id="@+id/titlebar_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="收集"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <com.agridata.cdzhdj.view.ScrollForeverTextView
+            android:id="@+id/car_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/view_space_10"
+            android:layout_gravity="center"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="川A12333"
+            android:textColor="@color/J5"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size_0.5"
+        android:background="@color/D1"
+        />
+
+
+
+    <include
+        android:id="@+id/no_network_layout"
+        layout="@layout/layout_no_network_tips" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/grid_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_space_10"
+        android:background="@color/contact_divider" />
+
+
+    <LinearLayout
+        android:id="@+id/apply_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_56"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:padding="@dimen/view_space_2"
+        android:focusable="true">
+
+        <ImageView
+
+            android:layout_width="@dimen/view_height_64"
+            android:layout_height="@dimen/view_height_64"
+            android:padding="@dimen/view_space_14"
+            android:src="@drawable/icon_other_07" />
+
+        <TextView
+            android:id="@+id/declarationCollectionManagement_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="申报收集管理"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/message_tv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="6dp"
+            android:visibility="gone"
+            android:background="@drawable/shape_message_notify_point"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="22dp"
+            android:layout_marginLeft="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            />
+
+        <ImageView
+            android:layout_width="@dimen/view_space_22"
+            android:layout_height="@dimen/view_space_22"
+            android:layout_marginRight="@dimen/view_space_12"
+            android:src="@drawable/ic_home_arrow" />
+    </LinearLayout>
+    <View
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size_0.5"
+        android:layout_marginStart="@dimen/view_space_14"
+        android:background="@color/D1"
+        />
+    <LinearLayout
+        android:id="@+id/sj_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_56"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:padding="@dimen/view_space_2">
+
+        <ImageView
+            android:id="@+id/home_stting_icon"
+            android:layout_width="@dimen/view_height_64"
+            android:layout_height="@dimen/view_height_64"
+            android:padding="@dimen/view_space_14"
+            android:src="@drawable/icon_rk_02" />
+
+        <TextView
+            android:id="@+id/home_stting_tex"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical"
+            android:text="收集记录管理"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16" />
+
+        <ImageView
+            android:layout_width="@dimen/view_space_22"
+            android:layout_height="@dimen/view_space_22"
+            android:layout_marginRight="@dimen/view_space_12"
+            android:src="@drawable/ic_home_arrow" />
+    </LinearLayout>
+
+    <View xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size_0.5"
+        android:layout_marginStart="@dimen/view_space_14"
+        android:layout_marginLeft="@dimen/view_space_16"
+        android:background="@color/D2" />
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 标签的背景 label_bg -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 标签选中时的背景 -->
+
+    <!-- 标签的正常背景 -->
+    <item>
+        <shape>
+            <stroke android:width="2dp" android:color="@color/J5" />
+            <corners android:radius="6dp" />
+            <solid android:color="@color/J5" />
+        </shape>
+    </item>
+</selector>

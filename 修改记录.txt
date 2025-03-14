@@ -1,0 +1,45 @@
+2023 3 14 修改appLogo  成都 oldapplogo.pic   登录页  首页  图标  设置  欢迎页
+
+
+TODO:入场查验，屠宰用途，屠宰场不对，不让查出来。饲养用途的，能够查，能入场，结果不合格. 2023-05-16  5月22日bug清单
+
+
+2023-8-16 (养殖一张图)
+TODO:屠宰场无害化处理申报页面（也就是无害化申报页面），增加“银行名称”字段，输入框。   farm/apply_tzc.html
+     移动端收运员收运页面，增加“银行名称”字段，输入框。   CollectFillInActivity   CollectEditFillInActivity
+     驻场监督员收集审核页面，增加“银行名称”字段，输入框。    harmless/xianchang/shoujiShenHeDetail.html
+     驻场管理员入库审核页面，增加“审核意见”，选择项：正常通过、数量不符、照片不符、大小不符、其他（手写）。 harmless/zhuchang/rukuShenHeDetail.html
+     驻场监督员处理审核页面，增加显示“处理时间起”、“处理时间止”。监督员签字后水印显示内容：
+     水印：日期时间（秒）、坐标、单号、养殖场户、
+     收运员、监督员、处理员、驻场监督员、收集数。（时间、坐标已有，补充后面几项）
+     harmless/zhuchang/chuliShenHeDetail.html   JianDuYuanSignActivity
+     移动端残余物入库页面：增加签字后水印显示内容：日期时间（秒）、
+     坐标、单号、养殖场户、收运员、监督员、处理员、驻场监督员、收集数。 CanYuWuWebViewActivity
+
+2023-8-17 (养殖一张图)
+TODO: 审核意见:下拉选择、数量不符、照片不符、大小不符、其他 (手写)4审核监督员签名:无害化监督员签名，附有水印。
+        “水印:日期时间(秒)、坐标、单号、养殖场户、收运员、监督员、收集数。
+      “审核通过:点击审核通过后，无害化处理厂进行入库。“审核不通过:点击审核不通过后，收运员需要重新编辑提交。 CollectFillInActivity.Activity
+
+
+TODO: add
+      产品B    /pages/bxcustom/CCPBDetail.html?mid=${Mid}&mode=2
+      产品A    /pages/bxcustom/CCPADetails.html?mid=${Mid}
+      动物A    /pages/plugins/form/form.html?fid=d2a2245d78a44177966e2552a6df12b4&id=${Mid}&mode=2&cid=bca2277f177f41a6a65d836fff78ffca
+      动物B    /pages/plugins/form/form.html?fid=53aa6017f85244f1807116ae3b0fe63c&id=${Mid}&mode=2&cid=44be5d010ab14aaaa99383eb72875145
+
+
+2023-11-28 (入场查验)
+ TODO: add 判定动物如果是猪牛羊，则显示耳标抽查并做判定。如果是其他动物则不显示
+           耳标抽查，同时不做判定，在六符合中耳标号是否符合增加一个“不抽查”，其他动物默认不抽查，已发布V1.6.7版本进行测试
+
+
+ 2023-12-26 (无害化)---- whh-master 分支
+TODO:2023-12-26 修改新版无害化相对人列表   接口getFarmXdrInfoListByUserIdAndMobile 取BindFarm
+
+2024-01-03
+ TODO:至为对接 要求必须拍照 （纸质单据重复）2024-01-03
+
+
+2024-03-20
+ TODO:修改 入场查验，无害化，检疫 图片相关为拍照。不能手动选择，开启图片压缩引擎

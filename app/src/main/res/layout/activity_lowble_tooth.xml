@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/titleBarHeight_48"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/titlebar_left"
+            android:layout_width="@dimen/view_space_22"
+            android:src="@drawable/title_back"
+            android:layout_marginLeft="@dimen/view_space_12"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true" />
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="扫描耳标号 "
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16" />
+            <TextView
+                android:id="@+id/ear_tag_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text=" 0 "
+                android:textColor="@color/Red"
+                android:textSize="@dimen/text_size_16" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="个"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/commit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/view_space_10"
+            android:layout_marginRight="@dimen/view_space_4"
+            android:text="提交"
+            android:textColor="@color/J5"
+            android:textSize="@dimen/text_size_16" />
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@+id/title_bar"
+        android:id="@+id/view_line"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size_0.5"
+        android:background="@color/D1"
+        />
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/ble_layout"
+        android:layout_below="@+id/view_line"
+        android:background="@color/J5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_space_40">
+
+        <ImageView
+            android:id="@+id/ble_ic"
+            android:layout_marginLeft="@dimen/view_space_8"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_bluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+        <TextView
+            android:layout_toRightOf="@+id/ble_ic"
+            android:id="@+id/ble_title"
+            android:layout_gravity="center"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:text="Ble藍牙已連接"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/duankai_tv"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/view_space_12"
+            android:layout_width="wrap_content"
+            android:text="断开连接"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

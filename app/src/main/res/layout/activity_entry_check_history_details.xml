@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/titleBarHeight_48"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/titlebar_left"
+            android:layout_width="@dimen/view_space_22"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/view_space_12"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:id="@+id/titlebar_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="入场查验记录详细"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size_0.5"
+        android:background="@color/D1" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/view_space_16"
+        android:layout_marginTop="@dimen/view_space_12"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="详情信息"
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_16"></TextView>
+
+        <View xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_size_1"
+            android:layout_marginTop="@dimen/view_space_4"
+            android:background="@color/D2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_space_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="检疫证类型："
+                android:textColor="@color/T6"
+                android:textSize="@dimen/text_size_14">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/cert_type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_16"
+                tools:text="SHADASDJKASJHDKASHDKASJ"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_space_4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="检疫证号："
+                android:textColor="@color/T6"
+                android:textSize="@dimen/text_size_14">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/cert_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_16"
+                tools:text="SHADASDJKASJHDKASHDKASJ"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_space_4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="抽查数量："
+                android:textColor="@color/T6"
+                android:textSize="@dimen/text_size_14">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/animal_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_16"
+                tools:text="SHADASDJKASJHDKASHDKASJ"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_space_4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="合格耳标号："
+                android:textColor="@color/T6"
+                android:textSize="@dimen/text_size_14">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/qualified_ear_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_16"
+                tools:text="SHADASDJKASJHDKASHDKASJ"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_space_4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="不合格耳标号："
+                android:textColor="@color/T6"
+                android:textSize="@dimen/text_size_14">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/failed_ear_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_16"
+                tools:text="SHADASDJKASJHDKASHDKASJ"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_space_4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="抽查结果："
+                android:textColor="@color/T6"
+                android:textSize="@dimen/text_size_14">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/test_result_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_16"
+                tools:text="SHADASDJKASJHDKASHDKASJ"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_space_4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="到达时间是否合格："
+                android:textColor="@color/T6"
+                android:textSize="@dimen/text_size_14">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/time_qualified_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_16"
+                tools:text="SHADASDJKASJHDKASHDKASJ"></TextView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_space_4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="达到地点是否合格："
+                android:textColor="@color/T6"
+                android:textSize="@dimen/text_size_14">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/address_qualified_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_16"
+                tools:text="SHADASDJKASJHDKASHDKASJ"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_space_4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="运输车辆是否合格："
+                android:textColor="@color/T6"
+                android:textSize="@dimen/text_size_14">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/car_qualified_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_16"
+                tools:text="SHADASDJKASJHDKASHDKASJ"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_space_4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跨省运输通道是否合格："
+                android:textColor="@color/T6"
+                android:textSize="@dimen/text_size_14">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/channel_qualified_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_16"
+                tools:text="SHADASDJKASJHDKASHDKASJ"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_space_4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="动物数量是否合格："
+                android:textColor="@color/T6"
+                android:textSize="@dimen/text_size_14">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/animal_qualified_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_16"
+                tools:text="SHADASDJKASJHDKASHDKASJ"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_space_4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="耳标数量是否合格："
+                android:textColor="@color/T6"
+                android:textSize="@dimen/text_size_14">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/eartag_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_16"
+                tools:text="SHADASDJKASJHDKASHDKASJ"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_space_4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查验时间："
+                android:textColor="@color/T6"
+                android:textSize="@dimen/text_size_14">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/inspection_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_16"
+                tools:text="SHADASDJKASJHDKASHDKASJ"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/dzh_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_space_4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="代宰户名称（数量）："
+                android:textColor="@color/T6"
+                android:textSize="@dimen/text_size_14">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/dzh_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_16"
+                tools:text="SHADASDJKASJHDKASHDKASJ"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="车头照片"
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_16"/>
+
+        <View xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_size_1"
+            android:layout_marginTop="@dimen/view_space_4"
+            android:background="@color/D2" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/car_iv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_space_100"
+            android:layout_marginLeft="@dimen/view_space_16"
+            android:layout_marginTop="@dimen/view_space_10"
+            android:layout_marginRight="@dimen/view_space_24"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:id="@+id/check_image_ll"
+            android:orientation="vertical"
+            android:layout_marginRight="@dimen/view_space_16"
+            android:paddingBottom="@dimen/view_height_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="抽查耳标照片"
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_16"></TextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_size_1"
+            android:layout_marginTop="@dimen/view_space_4"
+            android:background="@color/D2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/img_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>

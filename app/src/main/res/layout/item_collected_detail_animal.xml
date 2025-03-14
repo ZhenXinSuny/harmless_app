@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:padding="@dimen/view_space_10"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_44">
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/earTag_tv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@android:color/black"
+            android:text="88888888888888888"
+            />
+
+
+        <TextView
+            android:layout_weight="0.5"
+            android:id="@+id/dongwu_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:layout_toStartOf="@+id/zhongliang_tv"
+            android:gravity="center"
+            android:text="猪"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:layout_weight="0.5"
+            android:id="@+id/zhongliang_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:gravity="center"
+            android:text="10kg"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_16" />
+
+    </LinearLayout>
+    <View
+        android:id="@+id/view_1"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/view_space_12"
+        android:layout_marginRight="@dimen/view_space_12"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size_1"
+        android:background="@color/D2" />
+
+</LinearLayout>

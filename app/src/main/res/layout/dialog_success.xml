@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_border_white"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/view_space_26"
+        android:paddingRight="@dimen/view_space_26"
+        android:paddingTop="@dimen/view_space_26"
+        android:paddingBottom="@dimen/view_space_26"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/iv_sucesss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+        <TextView
+            android:id="@+id/content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:text="上传成功"
+            android:layout_gravity="center"
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_16"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

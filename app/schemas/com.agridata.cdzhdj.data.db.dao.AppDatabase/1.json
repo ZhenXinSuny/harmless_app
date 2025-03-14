@@ -1,0 +1,836 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "9fb8ba37df0eba6adb09ee00b7710e1f",
+    "entities": [
+      {
+        "tableName": "RoleBeanDB",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `shouYunRegion` TEXT, `RoleUserInfoDBUserID` TEXT, `username` TEXT, `RoleUserInfoDBMobile` TEXT, `nickname` TEXT, `appId` TEXT, `name` TEXT, `avatar` TEXT, `RoleHarmlessUserMid` TEXT, `RoleHarmlessUserName` TEXT, `partid` TEXT, `RoleHarmlessUserID` TEXT, `RoleHarmlessUserMobile` TEXT, `idcard` TEXT, `key` TEXT, `RoleDTOName` TEXT, `mid` TEXT, `FactoryDTOName` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "shouYunRegion",
+            "columnName": "shouYunRegion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "roleUserInfoDb.userId",
+            "columnName": "RoleUserInfoDBUserID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "roleUserInfoDb.username",
+            "columnName": "username",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "roleUserInfoDb.mobile",
+            "columnName": "RoleUserInfoDBMobile",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "roleUserInfoDb.nickname",
+            "columnName": "nickname",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "roleUserInfoDb.appId",
+            "columnName": "appId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "roleUserInfoDb.name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "roleUserInfoDb.avatar",
+            "columnName": "avatar",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "roleHarmlessUserDb.mid",
+            "columnName": "RoleHarmlessUserMid",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "roleHarmlessUserDb.name",
+            "columnName": "RoleHarmlessUserName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "roleHarmlessUserDb.partid",
+            "columnName": "partid",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "roleHarmlessUserDb.userId",
+            "columnName": "RoleHarmlessUserID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "roleHarmlessUserDb.mobile",
+            "columnName": "RoleHarmlessUserMobile",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "roleHarmlessUserDb.idcard",
+            "columnName": "idcard",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "roleHarmlessUserDb.role.key",
+            "columnName": "key",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "roleHarmlessUserDb.role.name",
+            "columnName": "RoleDTOName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "roleHarmlessUserDb.factory.mid",
+            "columnName": "mid",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "roleHarmlessUserDb.factory.name",
+            "columnName": "FactoryDTOName",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "ApplyDBean",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`mid` TEXT NOT NULL, `userName` TEXT, `mobile` TEXT, `dieAmount` TEXT, `dieWeight` TEXT, `animalID` TEXT, `applyType` TEXT, `farmMid` TEXT, `remark` TEXT, `applyTime` TEXT, `checkUser` TEXT, `checkTime` TEXT, `checkSignature` TEXT, `checkRemark` TEXT, `checkStatus` INTEGER NOT NULL, `regionID` INTEGER NOT NULL, `regionRI1` INTEGER NOT NULL, `regionRI2` INTEGER NOT NULL, `regionRI3` INTEGER NOT NULL, `regionRI4` INTEGER NOT NULL, `regionRI5` INTEGER NOT NULL, `applyCategory` TEXT, `applyAddress` TEXT, `isApplySelf` INTEGER NOT NULL, `applyNo` TEXT, `iDCard` TEXT, `bankName` TEXT, `bankCardNo` TEXT, `sourceType` INTEGER NOT NULL, `createAt` INTEGER NOT NULL, `lastUpdate` INTEGER NOT NULL, `createAtStr` TEXT, `lastUpdateStr` TEXT, `AnimalBeanID` INTEGER, `AnimalBeanName` TEXT, `RegionBeanID` INTEGER, `rI1` INTEGER, `rI2` INTEGER, `rI3` INTEGER, `rI4` INTEGER, `rI5` INTEGER, `regionCode` TEXT, `regionName` TEXT, `regionLevel` INTEGER, `regionFullName` TEXT, `regionParentID` INTEGER, `ApplyPointBeanID` TEXT, `ApplyPointBeanName` TEXT, `bankPic` TEXT, `idCardPic` TEXT, `idCardPicBg` TEXT, PRIMARY KEY(`mid`))",
+        "fields": [
+          {
+            "fieldPath": "mid",
+            "columnName": "mid",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userName",
+            "columnName": "userName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mobile",
+            "columnName": "mobile",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dieAmount",
+            "columnName": "dieAmount",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dieWeight",
+            "columnName": "dieWeight",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "animalID",
+            "columnName": "animalID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "applyType",
+            "columnName": "applyType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "farmMid",
+            "columnName": "farmMid",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "remark",
+            "columnName": "remark",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "applyTime",
+            "columnName": "applyTime",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "checkUser",
+            "columnName": "checkUser",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "checkTime",
+            "columnName": "checkTime",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "checkSignature",
+            "columnName": "checkSignature",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "checkRemark",
+            "columnName": "checkRemark",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "checkStatus",
+            "columnName": "checkStatus",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "regionID",
+            "columnName": "regionID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "regionRI1",
+            "columnName": "regionRI1",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "regionRI2",
+            "columnName": "regionRI2",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "regionRI3",
+            "columnName": "regionRI3",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "regionRI4",
+            "columnName": "regionRI4",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "regionRI5",
+            "columnName": "regionRI5",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "applyCategory",
+            "columnName": "applyCategory",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "applyAddress",
+            "columnName": "applyAddress",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isApplySelf",
+            "columnName": "isApplySelf",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "applyNo",
+            "columnName": "applyNo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "iDCard",
+            "columnName": "iDCard",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "bankName",
+            "columnName": "bankName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "bankCardNo",
+            "columnName": "bankCardNo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sourceType",
+            "columnName": "sourceType",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createAt",
+            "columnName": "createAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastUpdate",
+            "columnName": "lastUpdate",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createAtStr",
+            "columnName": "createAtStr",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastUpdateStr",
+            "columnName": "lastUpdateStr",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "animal.iD",
+            "columnName": "AnimalBeanID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "animal.name",
+            "columnName": "AnimalBeanName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.iD",
+            "columnName": "RegionBeanID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.rI1",
+            "columnName": "rI1",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.rI2",
+            "columnName": "rI2",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.rI3",
+            "columnName": "rI3",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.rI4",
+            "columnName": "rI4",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.rI5",
+            "columnName": "rI5",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.regionCode",
+            "columnName": "regionCode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.regionName",
+            "columnName": "regionName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.regionLevel",
+            "columnName": "regionLevel",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.regionFullName",
+            "columnName": "regionFullName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.regionParentID",
+            "columnName": "regionParentID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "applyPoint.iD",
+            "columnName": "ApplyPointBeanID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "applyPoint.name",
+            "columnName": "ApplyPointBeanName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imgFiles.bankPic",
+            "columnName": "bankPic",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imgFiles.idCardPic",
+            "columnName": "idCardPic",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imgFiles.idCardPicBg",
+            "columnName": "idCardPicBg",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "mid"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "CollectionDBModel",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`applyGUID` TEXT, `creatorId` TEXT, `collectNo` TEXT NOT NULL, `dieAmount` TEXT, `dieWeight` TEXT, `scale` INTEGER NOT NULL, `isDisinfect` INTEGER NOT NULL, `disinfect` TEXT, `disease` INTEGER NOT NULL, `dieReasonType` TEXT, `isInsurance` INTEGER NOT NULL, `latitude` TEXT, `longitude` TEXT, `collectType` INTEGER NOT NULL, `bankName` TEXT, `idcard` TEXT, `bankCardNo` TEXT, `factoryGUID` TEXT, `remark` TEXT, `itemDatas` TEXT, `farmMid` TEXT, `xdrName` TEXT, `xdrMobile` TEXT, `xdrAddress` TEXT, `collectionTime` TEXT, `AnimalKey` TEXT, `AnimalName` TEXT, `UnitKey` TEXT, `UnitName` TEXT, `Mid` TEXT, `Name` TEXT, `InsuranceCompanyKey` TEXT, `InsuranceCompanyName` TEXT, `IdCardPic` TEXT, `BankPic` TEXT, `SiChuPicList` TEXT, `ShiTiPicList` TEXT, `ZhuangChePicList` TEXT, `ShouYunYuanPic` TEXT, `YangZhiChangHuPic` TEXT, `CollectCertPic` TEXT, `id` INTEGER, `RI1` INTEGER, `RI2` INTEGER, `RI3` INTEGER, `RI4` INTEGER, `RI5` INTEGER, `RegionCode` TEXT, `RegionName` TEXT, `RegionLevel` INTEGER, `RI1RegionName` TEXT, `RI2RegionName` TEXT, `RI3RegionName` TEXT, `RI4RegionName` TEXT, `RI5RegionName` TEXT, `RegionFullName` TEXT, `RegionParentID` INTEGER, `WokerMid` TEXT, `WokerName` TEXT, `Mobile` TEXT, PRIMARY KEY(`collectNo`))",
+        "fields": [
+          {
+            "fieldPath": "applyGUID",
+            "columnName": "applyGUID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "creatorId",
+            "columnName": "creatorId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "collectNo",
+            "columnName": "collectNo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dieAmount",
+            "columnName": "dieAmount",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dieWeight",
+            "columnName": "dieWeight",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "scale",
+            "columnName": "scale",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isDisinfect",
+            "columnName": "isDisinfect",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "disinfect",
+            "columnName": "disinfect",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "disease",
+            "columnName": "disease",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dieReasonType",
+            "columnName": "dieReasonType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isInsurance",
+            "columnName": "isInsurance",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "latitude",
+            "columnName": "latitude",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "longitude",
+            "columnName": "longitude",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "collectType",
+            "columnName": "collectType",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bankName",
+            "columnName": "bankName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "idcard",
+            "columnName": "idcard",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "bankCardNo",
+            "columnName": "bankCardNo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "factoryGUID",
+            "columnName": "factoryGUID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "remark",
+            "columnName": "remark",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "itemDatas",
+            "columnName": "itemDatas",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "farmMid",
+            "columnName": "farmMid",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "xdrName",
+            "columnName": "xdrName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "xdrMobile",
+            "columnName": "xdrMobile",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "xdrAddress",
+            "columnName": "xdrAddress",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "collectionTime",
+            "columnName": "collectionTime",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "animal.key",
+            "columnName": "AnimalKey",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "animal.AnimalName",
+            "columnName": "AnimalName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "animalUnit.key",
+            "columnName": "UnitKey",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "animalUnit.UnitName",
+            "columnName": "UnitName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "carInfo.Mid",
+            "columnName": "Mid",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "carInfo.Name",
+            "columnName": "Name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "insuranceCompany.key",
+            "columnName": "InsuranceCompanyKey",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "insuranceCompany.InsuranceCompanyName",
+            "columnName": "InsuranceCompanyName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imgFiles.IdCardPic",
+            "columnName": "IdCardPic",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imgFiles.BankPic",
+            "columnName": "BankPic",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imgFiles.SiChuPicList",
+            "columnName": "SiChuPicList",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imgFiles.ShiTiPicList",
+            "columnName": "ShiTiPicList",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imgFiles.ZhuangChePicList",
+            "columnName": "ZhuangChePicList",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imgFiles.ShouYunYuanPic",
+            "columnName": "ShouYunYuanPic",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imgFiles.YangZhiChangHuPic",
+            "columnName": "YangZhiChangHuPic",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imgFiles.CollectCertPic",
+            "columnName": "CollectCertPic",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.RI1",
+            "columnName": "RI1",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.RI2",
+            "columnName": "RI2",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.RI3",
+            "columnName": "RI3",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.RI4",
+            "columnName": "RI4",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.RI5",
+            "columnName": "RI5",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.RegionCode",
+            "columnName": "RegionCode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.RegionName",
+            "columnName": "RegionName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.RegionLevel",
+            "columnName": "RegionLevel",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.RI1RegionName",
+            "columnName": "RI1RegionName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.RI2RegionName",
+            "columnName": "RI2RegionName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.RI3RegionName",
+            "columnName": "RI3RegionName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.RI4RegionName",
+            "columnName": "RI4RegionName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.RI5RegionName",
+            "columnName": "RI5RegionName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.RegionFullName",
+            "columnName": "RegionFullName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "region.RegionParentID",
+            "columnName": "RegionParentID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "worker.Mid",
+            "columnName": "WokerMid",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "worker.Name",
+            "columnName": "WokerName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "worker.Mobile",
+            "columnName": "Mobile",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "collectNo"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '9fb8ba37df0eba6adb09ee00b7710e1f')"
+    ]
+  }
+}

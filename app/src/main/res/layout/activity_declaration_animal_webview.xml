@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <ProgressBar
+        android:id="@+id/web_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-7dp"
+        android:layout_marginTop="-7dp"
+        android:indeterminate="false"
+        />
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/ble_layout"
+        android:layout_below="@+id/view_line"
+        android:background="@color/J5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_space_40">
+
+        <ImageView
+            android:id="@+id/ble_ic"
+            android:layout_marginLeft="@dimen/view_space_8"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_bluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+        <TextView
+            android:layout_toRightOf="@+id/ble_ic"
+            android:id="@+id/ble_title"
+            android:layout_gravity="center"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:text="Ble藍牙已連接"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/duankai_tv"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/view_space_12"
+            android:layout_width="wrap_content"
+            android:text="断开连接"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </RelativeLayout>
+</LinearLayout>

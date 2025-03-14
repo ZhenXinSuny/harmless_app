@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".activity.fragment.MainFragment">
+
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="@dimen/view_space_120"
+        android:layout_height="@dimen/view_space_120"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/view_space_60"
+        android:src="@drawable/old_applogo_pic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/view_space_16"
+        android:text="@string/login_title_name"
+        android:textColor="@color/T9"
+        android:textSize="@dimen/text_size_18"
+        android:textStyle="bold">
+    </TextView>
+
+    <androidx.core.widget.NestedScrollView
+        android:scrollbars="none"
+        android:layout_marginTop="@dimen/view_space_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</LinearLayout>

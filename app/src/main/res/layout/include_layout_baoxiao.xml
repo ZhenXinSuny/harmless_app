@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/view_space_8"
+        android:layout_marginRight="@dimen/view_space_8"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="*"
+            android:textColor="@color/Red"
+            android:textSize="@dimen/text_size_14"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="购买保险:"
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_14"></TextView>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/view_space_12"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/baoxian_yes_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="是"
+                android:button="@drawable/selector_checkbox"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_14" />
+
+            <RadioButton
+                android:id="@+id/baoxian_no_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/view_space_18"
+                android:onClick="onRadioButtonClicked"
+                android:text="否"
+                android:button="@drawable/selector_checkbox"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_14" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/view_space_8"
+        android:paddingBottom="@dimen/view_space_8">
+
+        <LinearLayout
+            android:id="@+id/baoxian_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_space_8"
+            android:layout_marginRight="@dimen/view_space_8"
+            android:layout_marginBottom="@dimen/view_space_8"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="*"
+                android:textColor="@color/Red"
+                android:textSize="@dimen/text_size_14"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="保险公司:"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_14"></TextView>
+
+            <TextView
+                android:id="@+id/insurance_company_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height_36"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/view_space_12"
+                android:layout_marginRight="@dimen/view_space_12"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_bg"
+                android:focusable="false"
+                android:gravity="left|center"
+                android:hint="请选择保险公司"
+                android:paddingLeft="@dimen/view_space_8"
+                android:textColor="@color/T2"
+                android:textColorHint="@color/T2"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_space_8"
+            android:layout_marginRight="@dimen/view_space_8"
+            android:layout_marginBottom="@dimen/view_space_8"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="*"
+                android:textColor="@color/Red"
+                android:textSize="@dimen/text_size_14"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="身份证号:"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_14"></TextView>
+
+            <EditText
+                android:id="@+id/idcard_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height_36"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/view_space_12"
+                android:layout_marginRight="@dimen/view_space_12"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_bg"
+                android:gravity="left|center"
+                android:hint="请输入身份证号"
+                android:maxLength="18"
+                android:paddingLeft="@dimen/view_space_8"
+                android:textColor="@color/T2"
+                android:textColorHint="@color/T2"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/view_space_40"
+            android:layout_marginTop="@dimen/view_space_8"
+            android:layout_marginRight="@dimen/view_space_40"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/idcard_iv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height_140"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_default_iv"></androidx.appcompat.widget.AppCompatImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/view_space_4"
+                android:text="大于5M照片上传较慢请耐心等待"
+                android:textColor="@color/Red"
+                android:textSize="@dimen/text_size_12" />
+
+            <Button
+                android:id="@+id/up_car_iv_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height_36"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/view_space_32"
+                android:layout_marginTop="@dimen/view_space_8"
+                android:layout_marginRight="@dimen/view_space_32"
+                android:background="@drawable/ripple_login"
+                android:enabled="true"
+                android:text="上传身份证照片"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_space_8"
+            android:layout_marginTop="@dimen/view_space_10"
+            android:layout_marginRight="@dimen/view_space_8"
+            android:layout_marginBottom="@dimen/view_space_8"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="*"
+                android:textColor="@color/Red"
+                android:textSize="@dimen/text_size_14"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="银行名称:"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_14"></TextView>
+
+            <TextView
+                android:id="@+id/bank_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height_36"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/view_space_12"
+                android:layout_marginRight="@dimen/view_space_12"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_bg"
+                android:focusable="false"
+                android:gravity="left|center"
+                android:hint="请选择银行名称"
+                android:maxLength="18"
+                android:paddingLeft="@dimen/view_space_8"
+                android:textColor="@color/T2"
+                android:textColorHint="@color/T2"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_space_8"
+            android:layout_marginTop="@dimen/view_space_8"
+            android:layout_marginRight="@dimen/view_space_8"
+            android:layout_marginBottom="@dimen/view_space_8"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="*"
+                android:textColor="@color/Red"
+                android:textSize="@dimen/text_size_14"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="账户信息:"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_14"></TextView>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/view_space_12"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/bank_yes_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="银行卡"
+                    android:button="@drawable/selector_checkbox"
+                    android:textColor="@color/T2"
+                    android:textSize="@dimen/text_size_14" />
+
+                <RadioButton
+                    android:id="@+id/deposit_no_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/view_space_22"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="基本存款账户"
+                    android:button="@drawable/selector_checkbox"
+                    android:textColor="@color/T2"
+                    android:textSize="@dimen/text_size_14" />
+            </RadioGroup>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/bank_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_space_8"
+            android:layout_marginTop="@dimen/view_space_8"
+            android:layout_marginRight="@dimen/view_space_8"
+            android:layout_marginBottom="@dimen/view_space_8"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="*"
+                android:textColor="@color/Red"
+                android:textSize="@dimen/text_size_14"></TextView>
+
+            <TextView
+                android:id="@+id/bank_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="银行卡号:"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_14"></TextView>
+
+            <EditText
+                android:id="@+id/bank_num_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height_36"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/view_space_12"
+                android:layout_marginRight="@dimen/view_space_12"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_bg"
+                android:gravity="left|center"
+                android:hint="请输入银行卡号"
+                android:inputType="number|numberDecimal"
+                android:maxLength="21"
+                android:paddingLeft="@dimen/view_space_8"
+                android:textColor="@color/T2"
+                android:textColorHint="@color/T2"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bank_image_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/view_space_40"
+            android:layout_marginTop="@dimen/view_space_8"
+            android:layout_marginRight="@dimen/view_space_40"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/bank_iv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height_140"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_default_iv"></androidx.appcompat.widget.AppCompatImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/view_space_4"
+                android:text="大于5M照片上传较慢请耐心等待"
+                android:textColor="@color/Red"
+                android:textSize="@dimen/text_size_12" />
+
+            <Button
+                android:id="@+id/up_bank_iv_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height_36"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/view_space_32"
+                android:layout_marginTop="@dimen/view_space_8"
+                android:layout_marginRight="@dimen/view_space_32"
+                android:background="@drawable/ripple_login"
+                android:enabled="true"
+                android:text="上传银行卡号照片"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/deposit_account_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_space_8"
+            android:layout_marginTop="@dimen/view_space_8"
+            android:layout_marginEnd="@dimen/view_space_8"
+            android:layout_marginBottom="@dimen/view_space_8"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="*"
+                android:textColor="@color/Red"
+                android:textSize="@dimen/text_size_14"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="账号号码:"
+                android:textColor="@color/T2"
+                android:textSize="@dimen/text_size_14"></TextView>
+
+            <EditText
+                android:id="@+id/deposit_account_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height_36"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/view_space_12"
+                android:layout_marginRight="@dimen/view_space_12"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_bg"
+                android:gravity="left|center"
+                android:hint="请输入基本存款账户号码"
+                android:inputType="number|numberDecimal"
+                android:maxLength="21"
+                android:paddingLeft="@dimen/view_space_8"
+                android:textColor="@color/T2"
+                android:textColorHint="@color/T2"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/deposit_image_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/view_space_40"
+            android:layout_marginTop="@dimen/view_space_8"
+            android:layout_marginRight="@dimen/view_space_40"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/deposit_iv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height_140"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_default_iv"></androidx.appcompat.widget.AppCompatImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/view_space_4"
+                android:text="大于5M照片上传较慢请耐心等待"
+                android:textColor="@color/Red"
+                android:textSize="@dimen/text_size_12" />
+
+            <Button
+                android:id="@+id/up_deposit_iv_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height_36"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/view_space_32"
+                android:layout_marginTop="@dimen/view_space_8"
+                android:layout_marginRight="@dimen/view_space_32"
+                android:background="@drawable/ripple_login"
+                android:enabled="true"
+                android:text="上传基本存款账户信息"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:showDividers="middle">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/titleBarHeight_48"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+         <ImageView
+            android:id="@+id/titlebar_left"
+            android:layout_width="@dimen/view_space_22"
+            android:src="@drawable/title_back"
+            android:layout_marginLeft="@dimen/view_space_12"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true" />
+
+        <com.agridata.cdzhdj.view.ScrollForeverTextView
+            android:id="@+id/titlebar_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="免疫耳标"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+
+
+
+        <com.agridata.cdzhdj.view.ScrollForeverTextView
+            android:id="@+id/choose_all_tv"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:padding="@dimen/view_space_12"
+            android:singleLine="true"
+            android:text="全选"
+            android:textColor="@color/J5"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+    <View
+        android:layout_below="@+id/title_bar"
+        android:id="@+id/view_line"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size_0.5"
+        android:background="@color/D1"
+        />
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/ble_layout"
+        android:layout_below="@+id/view_line"
+        android:background="@color/J5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_space_40">
+
+        <ImageView
+            android:id="@+id/ble_ic"
+            android:layout_marginLeft="@dimen/view_space_8"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_bluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+        <TextView
+            android:layout_toRightOf="@+id/ble_ic"
+            android:id="@+id/ble_title"
+            android:layout_gravity="center"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:text="Ble藍牙已連接"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/duankai_tv"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/view_space_12"
+            android:layout_width="wrap_content"
+            android:text="断开连接"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_below="@+id/view_line"
+        android:id="@+id/not_data_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_no_data_new"
+            android:layout_width="@dimen/view_height_260"
+            android:layout_height="@dimen/view_height_260">
+        </ImageView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/ble_layout"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/recyclerview"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <LinearLayout
+            android:visibility="gone"
+           android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:id="@+id/choose_eartag_ll"
+            android:layout_height="@dimen/view_space_62"
+            android:orientation="vertical">
+            <View
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_size_0.5"
+                android:background="@color/D1"
+                />
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/view_space_12"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/choose_eartag_tips"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/T2"
+                    android:text="已选择耳标:"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                </TextView>
+                <TextView
+                    android:layout_toRightOf="@+id/choose_eartag_tips"
+                    android:id="@+id/eartag_num_tv"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/T2"
+                    android:text="个"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                </TextView>
+                <Button
+                    android:id="@+id/vaccine_input_btn"
+                    android:layout_toLeftOf="@+id/del_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/view_height_40"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/view_space_14"
+                    android:background="@drawable/ripple_login"
+                    android:text="疫苗录入"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_14" />
+                <Button
+                    android:id="@+id/del_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/view_height_40"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/view_space_14"
+                    android:background="@drawable/ps_del_btn"
+                    android:text="删除"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.leinardi.android.speeddial.SpeedDialOverlayLayout
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/close_speed_dial_menu"
+        app:clickable_overlay="true"
+        android:fitsSystemWindows="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <com.leinardi.android.speeddial.SpeedDialView
+        android:id="@+id/speedDial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+
+        android:layout_margin="20dp"
+        app:layout_behavior="@string/speeddial_scrolling_view_snackbar_behavior"
+        app:sdExpansionMode="top"
+        app:sdMainFabOpenedBackgroundColor="@color/J1"
+        app:sdMainFabAnimationRotateAngle="90"
+        app:sdMainFabClosedSrc="@drawable/ic_add_white_24dp"
+        app:sdMainFabOpenedSrc="@drawable/ic_animation_white_24dp"
+        app:sdMainFabClosedBackgroundColor="@color/J2"
+
+        />
+</RelativeLayout>

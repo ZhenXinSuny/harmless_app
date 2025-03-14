@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_border_white"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/view_space_20"
+        android:paddingRight="@dimen/view_space_20"
+        android:paddingTop="@dimen/view_space_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/view_space_16"
+            android:text="录入动物清单"
+            android:gravity="center"
+            android:textColor="@color/T2"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/view_space_8"
+                android:layout_marginStart="@dimen/view_space_8"
+                android:layout_marginRight="@dimen/view_space_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="重量:"
+                    android:layout_gravity="center"
+                    android:textColor="@color/T2"
+                    android:textSize="@dimen/text_size_14"></TextView>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup_weight"
+                    android:layout_marginLeft="@dimen/view_space_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:checked="true"
+                        android:id="@+id/weight_big"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="≥20kg"
+                        android:textColor="@color/T2"
+                        android:textSize="@dimen/text_size_14" />
+                    <RadioButton
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:id="@+id/weight_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="＜20kg"
+                        android:textColor="@color/T2"
+                        android:textSize="@dimen/text_size_14" />
+                </RadioGroup>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/baoxian_ll"
+                android:layout_marginBottom="@dimen/view_space_8"
+                android:layout_marginStart="@dimen/view_space_8"
+                android:layout_marginRight="@dimen/view_space_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="重量（kg）:"
+                    android:layout_gravity="center"
+                    android:textColor="@color/T2"
+                    android:textSize="@dimen/text_size_14"></TextView>
+
+                <EditText
+                    android:layout_weight="1"
+                    android:id="@+id/weight_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_height_36"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/view_space_6"
+                    android:layout_marginRight="@dimen/view_space_6"
+                    android:background="@drawable/edittext_bg"
+
+                    android:gravity="left|center"
+                    android:hint="请输入重量"
+                    android:paddingLeft="@dimen/view_space_8"
+                    android:textColor="@color/T2"
+                    android:textColorHint="@color/T2"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_marginBottom="@dimen/view_space_8"
+                android:layout_marginStart="@dimen/view_space_8"
+                android:layout_marginRight="@dimen/view_space_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="耳标号:"
+                    android:layout_gravity="center"
+                    android:textColor="@color/T2"
+                    android:textSize="@dimen/text_size_14"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="kg）"
+                    android:visibility="invisible"
+                    android:layout_gravity="center"
+                    android:textColor="@color/T2"
+                    android:textSize="@dimen/text_size_14"/>
+
+                <EditText
+                    android:layout_weight="1"
+                    android:id="@+id/eartag_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_height_36"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/view_space_6"
+                    android:maxLength="15"
+                    android:layout_marginRight="@dimen/view_space_6"
+                    android:background="@drawable/edittext_bg"
+                    android:gravity="left|center"
+                    android:hint="请输入耳标号"
+                    android:paddingLeft="@dimen/view_space_8"
+                    android:textColor="@color/T2"
+                    android:textColorHint="@color/T2"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginBottom="@dimen/view_space_8"
+                android:layout_marginStart="@dimen/view_space_8"
+                android:layout_marginEnd="@dimen/view_space_6"
+                android:layout_width="wrap_content"
+                  android:layout_gravity="right"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/eartag_btn"
+                    android:background="@drawable/ps_eartag_btn"
+                    android:text="连接耳标阅读器"
+
+                    android:textSize="@dimen/text_size_12"
+                    android:textColor="@color/white"
+                    android:paddingLeft="@dimen/view_space_10"
+                    android:paddingRight="@dimen/view_space_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/view_height_34">
+                </Button>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/view_space_8"
+                android:layout_marginStart="@dimen/view_space_8"
+                android:layout_marginRight="@dimen/view_space_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tips_string"
+                    android:layout_gravity="center"
+                    android:textColor="@color/Red"
+                    android:textSize="@dimen/text_size_12"/>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_space_64"
+            android:gravity="right|bottom"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/view_space_12"
+            >
+            <TextView
+                android:id="@+id/negative_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/view_space_38"
+                android:background="@drawable/selector_bottom_item_bg"
+                android:text="取消"
+                android:padding="@dimen/view_height_8"
+                android:textColor="@color/T6"
+                android:textSize="@dimen/text_size_16"
+                />
+            <TextView
+                android:padding="@dimen/view_height_8"
+                android:id="@+id/positive_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bottom_item_bg"
+                android:text="确定"
+                android:textColor="@color/J5"
+                android:textSize="@dimen/text_size_16"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

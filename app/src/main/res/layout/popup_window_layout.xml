@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popup_window_background"
+    android:orientation="vertical"
+
+   >
+
+    <TextView
+        android:layout_marginTop="@dimen/view_height_22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/view_space_10"
+        android:text="按时间选择"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_18"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/view_height_22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginTop="@dimen/view_space_6"
+                android:id="@+id/give_eartag_age"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/view_space_10"
+                android:layout_marginRight="@dimen/view_space_10"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/view_space_6">
+
+                <TextView
+                    android:textColor="@color/T6"
+                    android:id="@+id/start_time_tv"
+                    android:background="@drawable/edittext_bg_fillet"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/view_height_44"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:layout_marginRight="@dimen/view_space_6"
+                    android:layout_gravity="center"
+                    android:maxLength="10"
+                    android:textSize="@dimen/text_size_16" />
+
+                <View
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/view_space_16"
+                    android:layout_height="@dimen/divider_size_0.5"
+                    android:background="@color/D1"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/end_time_tv"
+                    android:background="@drawable/edittext_bg_fillet"
+                    android:textColor="@color/T6"
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="@dimen/view_space_6"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/view_height_44"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

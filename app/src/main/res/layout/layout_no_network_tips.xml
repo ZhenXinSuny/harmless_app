@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/view_height_36"
+    android:background="#fef1f1"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/no_network_tip_ll"
+    android:visibility="gone"
+    >
+
+    <ImageView
+        android:layout_width="@dimen/view_space_14"
+        android:layout_height="@dimen/view_space_14"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/view_space_24"
+        android:layout_marginRight="@dimen/view_space_10"
+        android:src="@drawable/ic_no_network_tip"
+        android:contentDescription="@null"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:text="当前网络不可用，请检查你的网络设置"
+        android:textColor="#ef6972"
+        android:textSize="@dimen/text_size_12"
+        />
+</LinearLayout>
